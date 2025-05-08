@@ -6,6 +6,7 @@ gsap.to("#loading-text", {
     yoyo: true,
     ease: "power1.inOut"
   });
+
   
  // After 3 seconds, fade out loading screen and show nav
 setTimeout(() => {
