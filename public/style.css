@@ -36,11 +36,12 @@ body {
 }
 
 .site-title {
-  font-family: 'UnifrakturCook', cursive;
-  font-size: 3rem;
+  font-family: 'Ballet', cursive;
+  font-size: 3.5rem;
+  line-height: 1.1;
   letter-spacing: 0.05em;
-  text-decoration: none;
   color: white;
+  text-decoration: none;
 }
 
 .site-subtitle {
