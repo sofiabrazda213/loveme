@@ -50,6 +50,38 @@ body {
   margin-top: 0.2rem;
 }
 
+/* Back button */
+
+.back-button {
+  font-family: monospace;
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  position: relative;
+  transition: opacity 0.2s ease;
+}
+
+.back-button:hover .tooltip {
+  opacity: 1;
+  transform: translateY(-1.2rem);
+}
+
+.tooltip {
+  position: absolute;
+  left: 1.5rem;
+  top: 0;
+  background: black;
+  color: white;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.7rem;
+  border-radius: 3px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+
 /* Right Side Navigation */
 .header-nav a {
   margin-left: 1.5rem;
