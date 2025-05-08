@@ -47,6 +47,31 @@ body {
     padding: 2rem;
     font-size: 1.5rem;
   }
+
+  /* Frame around content */
+.content-frame {
+    margin: 0 auto;
+    padding: 2rem;
+    max-width: 95vw;
+    min-height: 90vh;
+    border: 1px solid white;
+    box-shadow: 0 0 10px white;
+    box-sizing: border-box;
+  }
+
+  .content-frame {
+    transition: box-shadow 0.5s ease;
+  }
+  .content-frame:hover {
+    box-shadow: 0 0 20px white;
+  }
+
+  /* Optional: make it stretch to fit screen size */
+@media screen and (min-width: 768px) {
+    .content-frame {
+      max-width: 95%;
+    }
+  }
   
   @keyframes flicker {
     0% { opacity: 0.8; }
