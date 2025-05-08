@@ -66,6 +66,51 @@ body {
     box-shadow: 0 0 20px white;
   }
 
+  /* Navigation screen layout */
+.nav-menu-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .nav-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .nav-logo {
+    height: 100px;
+    margin-bottom: 1rem;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .nav-list li {
+    margin: 0.5rem 0;
+  }
+  
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+  }
+  
+  .nav-list a:hover {
+    text-decoration: underline;
+  }
+  
   /* Optional: make it stretch to fit screen size */
 @media screen and (min-width: 768px) {
     .content-frame {
