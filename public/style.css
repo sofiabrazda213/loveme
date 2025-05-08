@@ -22,10 +22,9 @@ body {
 
 .page-border {
   border: 2px solid white;
-  padding: 2rem;
+  box-shadow: 0 0 20px white;
   margin: 1rem;
-  min-height: 95vh;
-  box-shadow: 0 0 15px white;
+  padding: 1rem;
 }
 
 
