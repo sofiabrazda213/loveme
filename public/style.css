@@ -31,7 +31,14 @@ body {
 /* Left Side Title/Subtitle */
 .header-left {
   display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.title-container {
+  display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
 .site-title {
@@ -52,18 +59,25 @@ body {
 
 /* Back button */
 
-.back-button {
-  font-family: monospace;
-  color: white;
-  text-decoration: none;
-  margin-right: 1rem;
-  position: relative;
-  transition: opacity 0.2s ease;
+.back-container {
+  display: flex;
+  align-items: center;
 }
 
-.back-button:hover .tooltip {
-  opacity: 1;
-  transform: translateY(-1.2rem);
+.back-button {
+  text-decoration: none;
+  color: white;
+  font-family: monospace;
+  padding: 0.4rem 0.6rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
 }
 
 .tooltip {
