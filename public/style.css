@@ -235,9 +235,9 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-right: 2rem;
+  margin-left: auto;
   margin-top: 2rem;         /* separate from top of .content-frame */
-  margin-bottom: 2rem
+  margin-bottom: 2rem;      /* space below if needed */
 }
 
 /* Refresh line button */
