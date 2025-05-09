@@ -217,3 +217,45 @@ body {
     50% { opacity: 1; }
     100% { opacity: 0.9; }
   }   
+
+  /* Right-side poetry container */
+.poetry-container {
+  width: 300px;
+  height: 90vh;
+  float: right;
+  background-color: black;
+  border-left: 2px solid white;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: inset 0 0 10px #000, 0 0 10px #222;
+}
+
+/* Poetic line text */
+#quote-text {
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+/* Refresh line button */
+.poetry-container button {
+  margin-top: 1rem;
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.poetry-container button:hover {
+  background: white;
+  color: black;
+  opacity: 0.8;
+}
