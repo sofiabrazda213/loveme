@@ -284,19 +284,22 @@ quote-box {
 }
 
 .blog-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  padding: 2rem 0;
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .blog-card {
+  flex: 1 1 300px;
   border: 1px solid white;
   padding: 1rem;
   color: white;
   cursor: pointer;
   background: black;
   transition: transform 0.3s ease;
+  max-width: 350px;
 }
 
 .blog-card:hover {
@@ -312,16 +315,28 @@ quote-box {
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 2rem;
 }
 
 .modal-content {
   background: rgba(20, 20, 20, 0.95);
   padding: 2rem;
   border: 1px solid white;
-  width: 80%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 800px;
   color: white;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.blog-entry {
+  flex: 1 1 45%;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border: 1px solid white;
 }
 
 .close-button {
