@@ -36,6 +36,8 @@ if (window.location.pathname.includes("home.html")) {
       const books = data.results;
       const randomBook = books[Math.floor(Math.random() * books.length)];
       const textUrl = randomBook.formats["text/plain; charset=utf-8"] || randomBook.formats["text/plain"];
+      if (!textUrl) throw new Error("No plain text available for this book.");
+
   
       if (!textUrl) throw new Error("No plain text available.");
   

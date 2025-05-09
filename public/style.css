@@ -5,7 +5,8 @@ body {
     background-color: #000;
     color: #fff;
     font-family: 'IBM Plex Mono', monospace;
-    overflow: hidden;
+    height: auto;
+    overflow-y: auto;
   }
   
   /* Header Layout */
@@ -145,14 +146,13 @@ body {
 
   /* Frame around content */
 .content-frame {
-    margin: 0 auto;
-    padding: 2rem;
-    max-width: 95vw;
-    min-height: 90vh;
-    border: 1px solid white;
-    box-shadow: 0 0 10px white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
     box-sizing: border-box;
-    transition: box-shadow 0.5s ease;
   }
 
   .content-frame:hover {
@@ -220,23 +220,24 @@ body {
 
   /* Right-side poetry container */
 .poetry-container {
-  width: 300px;
-  height: 90vh;
-  float: right;
-  background-color: black;
-  border-left: 2px solid white;
+  width: 320px;
+  height: 85vh;
+  border: 2px solid white;
   padding: 1rem;
-  margin: 1rem;
+  box-shadow: inset 0 0 10px #000, 0 0 10px #222;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  box-shadow: inset 0 0 10px #000, 0 0 10px #222;
+  justify-content: flex-start;
 }
 
 quote-box {
   flex: 1;
   overflow-y: auto;
-  padding-right: 0.5rem;
+  color: white;
+  font-family: 'IBM Plex Mono', monospace;
+  white-space: pre-wrap;
+  line-height: 1.4;
   margin-bottom: 1rem;
 }
 
@@ -251,12 +252,10 @@ quote-box {
 
 /* Refresh line button */
 .poetry-container button {
-  margin-top: 1rem;
   background: transparent;
   color: white;
   border: 1px solid white;
   padding: 0.5rem;
-  font-family: inherit;
   cursor: pointer;
   transition: opacity 0.3s;
 }
