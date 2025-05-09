@@ -28,6 +28,7 @@ setTimeout(() => {
 // Only run quote generator if on home.html
 if (window.location.pathname.includes("home.html")) {
   async function generateLine() {
+    console.log("generateLine was called");
     try {
       const response = await fetch("https://gutendex.com/books/?languages=en&topic=poetry");
       const data = await response.json();
@@ -57,6 +58,7 @@ if (window.location.pathname.includes("home.html")) {
   }
 
   window.onload = generateLine;
+  window.generateLine = generateLine;
 }
 
   
