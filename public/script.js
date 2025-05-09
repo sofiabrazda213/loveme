@@ -54,4 +54,14 @@ if (window.location.pathname.includes("home.html")) {
   window.generateLine = generateLine;
 }
 
+// Blog load
+function openPost(id) {
+  document.getElementById('blog-modal').classList.remove('hidden');
+  document.querySelectorAll('.blog-entry').forEach(entry => entry.classList.add('hidden'));
+  document.getElementById(id).classList.remove('hidden');
+}
+
+function closePost() {
+  document.getElementById('blog-modal').classList.add('hidden');
+}
   

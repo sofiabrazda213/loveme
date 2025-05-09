@@ -21,12 +21,6 @@ body {
   /*border-bottom: 1px solid white;*/
 }
 
-.page-border {
-  border: 2px solid white;
-  box-shadow: 0 0 20px white;
-}
-
-
 /* Left Side Title/Subtitle */
 .header-left {
   display: flex;
@@ -142,10 +136,21 @@ body {
     text-align: center;
   }
 
+  @keyframes flicker {
+    0% { opacity: 0.8; }
+    50% { opacity: 1; }
+    100% { opacity: 0.9; }
+  } 
+
   .main-content {
     display: none;
     padding: 2rem;
     font-size: 1.5rem;
+  }
+
+  .page-border {
+    border: 2px solid white;
+    box-shadow: 0 0 20px white;
   }
 
   /* Frame around content */
@@ -165,11 +170,13 @@ body {
     box-shadow: 0 0 20px white;
   }
 
-  .blog-panel {
-    width: 100%;
-    color: white;
-    padding: 2rem;
-  }  
+    /* Make content-frame stretch to fit screen size */
+@media screen and (min-width: 768px) {
+  .content-frame {
+    max-width: 95%;
+  }
+}
+  
 
   /* Navigation screen layout */
 .nav-menu-screen {
@@ -215,22 +222,9 @@ body {
   
   .nav-list a:hover {
     text-decoration: underline;
-  }
-  
-  /* Optional: make it stretch to fit screen size */
-@media screen and (min-width: 768px) {
-    .content-frame {
-      max-width: 95%;
-    }
-  }
-  
-  @keyframes flicker {
-    0% { opacity: 0.8; }
-    50% { opacity: 1; }
-    100% { opacity: 0.9; }
-  }   
+  }  
 
-  /* Right-side poetry container */
+  /* Home - Right-side poetry container */
 .poetry-container {
   width: 320px;
   height: 85vh;
@@ -247,7 +241,7 @@ body {
   margin-bottom: 2rem;      /* space below if needed */
 }
 
-/* Refresh line button */
+/* Poetry generator */
 .poetry-container button {
   background: transparent;
   color: white;
@@ -273,11 +267,71 @@ quote-box {
   margin-bottom: 1rem;
 }
 
-/* Poetic line text */
 #quote-text {
   color: white;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 1rem;
   line-height: 1.4;
   white-space: pre-wrap;
+}
+
+/* Blog posts */
+
+.blog-panel {
+  width: 100%;
+  color: white;
+  padding: 2rem;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem 0;
+}
+
+.blog-card {
+  border: 1px solid white;
+  padding: 1rem;
+  color: white;
+  cursor: pointer;
+  background: black;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(20, 20, 20, 0.95);
+  padding: 2rem;
+  border: 1px solid white;
+  width: 80%;
+  max-width: 700px;
+  color: white;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
 }

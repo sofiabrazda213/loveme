@@ -36,12 +36,33 @@
 
     <main>
         <div class="content-frame">
-            <!-- All main page content here -->
-            <div class="poetry-container">
-              <div class="quote-box" id="quote-text">Loading line...</div>
-              <button onclick="generateLine()">new poem</button>
+            <!-- BLOG CARD GRID -->
+            <div class="blog-grid">
+                <div class="blog-card" onclick="openPost('blog-post-1')">
+                    <h3>Confinement, part 2</h3>
+                    <p>Reflections from lockdown...</p>
+                </div>
+                <div class="blog-card" onclick="openPost('blog-post-2')">
+                    <h3>City Rhythms</h3>
+                    <p>Sounds and silences of urban life</p>
+                </div>
             </div>
-          </div>
+  
+            <!-- MODAL BACKDROP + CONTENT -->
+            <div id="blog-modal" class="modal hidden">
+                <div class="modal-content">
+                <span class="close-button" onclick="closePost()">&times;</span>
+                <div id="blog-post-1" class="blog-entry hidden">
+                    <h2>Confinement, part 2</h2>
+                    <p>Full blog post content goes here...</p>
+                </div>
+                <div id="blog-post-2" class="blog-entry hidden">
+                    <h2>City Rhythms</h2>
+                    <p>Another blog post content here...</p>
+                </div>
+             </div>
+            </div>
+        </div>
     </main> 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
       <script src="script.js"></script>
