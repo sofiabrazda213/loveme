@@ -77,7 +77,7 @@ body {
 }
 
 .back-button::before {
-  content: "←";
+  content: "<-";
 }
 
 .back-button:hover {
