@@ -235,7 +235,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: auto;
+  margin-left: 2rem;
   margin-top: 2rem;         /* separate from top of .content-frame */
   margin-bottom: 2rem;    
 
