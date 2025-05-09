@@ -28,34 +28,32 @@ setTimeout(() => {
 // Only run quote generator if on home.html
 if (window.location.pathname.includes("home.html")) {
   async function generateLine() {
-    console.log("generateLine was called");
     try {
+      console.log("Fetching books...");
       const response = await fetch("https://gutendex.com/books/?languages=en&topic=poetry");
       const data = await response.json();
       const books = data.results;
-
+      console.log("Books received:", books);
+  
       const randomBook = books[Math.floor(Math.random() * books.length)];
-      const formats = randomBook.formats;
-
-      // Choose a plain text URL
-      const textUrl = formats["text/plain; charset=utf-8"] || formats["text/plain"];
-
-      if (!textUrl || !textUrl.includes(".txt")) {
-        throw new Error("No usable plain text file for this book.");
-      }
-
+      const textUrl = randomBook.formats["text/plain; charset=utf-8"] || randomBook.formats["text/plain"];
+      console.log("Selected book:", randomBook.title);
+      console.log("Text URL:", textUrl);
+  
+      if (!textUrl) throw new Error("No plain text available for this book.");
+  
       const textRes = await fetch(textUrl);
       const text = await textRes.text();
-
       const lines = text.split('\n').filter(line => line.length > 40 && line.length < 120);
+      console.log("Filtered lines:", lines.length);
+  
       const randomLine = lines[Math.floor(Math.random() * lines.length)];
-
       document.getElementById("quote-text").innerText = randomLine.trim();
     } catch (error) {
+      console.error("Error fetching or processing line:", error);
       document.getElementById("quote-text").innerText = "Failed to load line. Try again.";
-      console.error("Error fetching or processing book text:", error);
     }
-  }
+  }  
 
   window.onload = generateLine;
   window.generateLine = generateLine;
