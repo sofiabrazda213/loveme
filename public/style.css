@@ -165,6 +165,12 @@ body {
     box-shadow: 0 0 20px white;
   }
 
+  .blog-panel {
+    width: 100%;
+    color: white;
+    padding: 2rem;
+  }  
+
   /* Navigation screen layout */
 .nav-menu-screen {
     position: fixed;
