@@ -24,8 +24,6 @@ body {
 .page-border {
   border: 2px solid white;
   box-shadow: 0 0 20px white;
-  margin: 1rem;
-  padding: 1rem;
 }
 
 
@@ -66,19 +64,25 @@ body {
 
 .back-button {
   display: inline-block;
-  padding: 0.5rem 1rem;
+  padding: 0.25rem 0.5rem;
   background-color: transparent;
   color: white;
   border: 1px solid white;
   border-radius: 4px;
   text-decoration: none;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.back-button::before {
+  content: "←";
 }
 
 .back-button:hover {
   background-color: white;
   color: black;
-  opacity: 0.7;
 }
 
 .tooltip {
@@ -146,13 +150,15 @@ body {
 
   /* Frame around content */
 .content-frame {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;                /* reduce width to create margin on sides */
+  max-width: 1200px;         /* optional: limit how wide it can grow */
+  margin: 0 auto;            /* horizontally center the frame */
+  height: 100%;
+  padding: 0;
+  box-sizing: border-box;
   }
 
   .content-frame:hover {
@@ -229,6 +235,24 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-left: auto;
+
+}
+
+/* Refresh line button */
+.poetry-container button {
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.poetry-container button:hover {
+  background: white;
+  color: black;
+  opacity: 0.8;
 }
 
 quote-box {
@@ -248,20 +272,4 @@ quote-box {
   font-size: 1rem;
   line-height: 1.4;
   white-space: pre-wrap;
-}
-
-/* Refresh line button */
-.poetry-container button {
-  background: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 0.5rem;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-.poetry-container button:hover {
-  background: white;
-  color: black;
-  opacity: 0.8;
 }

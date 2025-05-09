@@ -26,36 +26,31 @@ setTimeout(() => {
 }, 3000);
 
 // Only run quote generator if on home.html
+// Only run quote generator if on home.html
 if (window.location.pathname.includes("home.html")) {
   async function generateLine() {
     try {
-      console.log("Fetching books...");
-      const response = await fetch("https://gutendex.com/books/?languages=en&topic=poetry");
+      const response = await fetch("https://poetrydb.org/random");
       const data = await response.json();
-      const books = data.results;
-      console.log("Books received:", books);
-  
-      const randomBook = books[Math.floor(Math.random() * books.length)];
-      const textUrl = randomBook.formats["text/plain; charset=utf-8"] || randomBook.formats["text/plain"];
-      console.log("Selected book:", randomBook.title);
-      console.log("Text URL:", textUrl);
-  
-      if (!textUrl) throw new Error("No plain text available for this book.");
-  
-      const textRes = await fetch(textUrl);
-      const text = await textRes.text();
-      const lines = text.split('\n').filter(line => line.length > 40 && line.length < 120);
-      console.log("Filtered lines:", lines.length);
-  
-      const randomLine = lines[Math.floor(Math.random() * lines.length)];
-      document.getElementById("quote-text").innerText = randomLine.trim();
-    } catch (error) {
-      console.error("Error fetching or processing line:", error);
-      document.getElementById("quote-text").innerText = "Failed to load line. Try again.";
-    }
-  }  
 
+      const poem = data[0];
+      const title = poem.title;
+      const poet = poem.author;
+      const content = poem.lines.join("<br>");
+
+      document.getElementById("quote-text").innerHTML =
+        `<strong>${title}</strong><br><br>${content}<br><br><em>- ${poet}</em>`;
+    } catch (error) {
+      console.error("Error fetching poem:", error);
+      document.getElementById("quote-text").textContent =
+        "Failed to load poem. Try again.";
+    }
+  }
+
+  // Load one when page loads
   window.onload = generateLine;
+
+  // Optional: expose globally if you want to call it via button
   window.generateLine = generateLine;
 }
 
