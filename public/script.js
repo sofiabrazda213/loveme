@@ -28,20 +28,30 @@ setTimeout(() => {
 // Only run quote generator if on home.html
 if (window.location.pathname.includes("home.html")) {
   async function generateLine() {
-    const bookIDs = [1342, 11, 84, 1661]; // You can expand this list
-    const randomID = bookIDs[Math.floor(Math.random() * bookIDs.length)];
-
     try {
-      const response = await fetch(`https://www.gutenberg.org/files/${randomID}/${randomID}-0.txt`);
-      const text = await response.text();
-      const lines = text.split('\n').filter(line => line.length > 40 && line.includes('Gutenberg'));
+      // Pick a random book from Gutendex (you can limit to poetry later)
+      const response = await fetch("https://gutendex.com/books/?languages=en&topic=poetry");
+      const data = await response.json();
+  
+      const books = data.results;
+      const randomBook = books[Math.floor(Math.random() * books.length)];
+      const textUrl = randomBook.formats["text/plain; charset=utf-8"] || randomBook.formats["text/plain"];
+  
+      if (!textUrl) throw new Error("No plain text available.");
+  
+      const textRes = await fetch(textUrl);
+      const text = await textRes.text();
+      const lines = text.split('\n').filter(line => line.length > 40 && line.length < 120);
       const randomLine = lines[Math.floor(Math.random() * lines.length)];
-      document.getElementById('quote-text').innerText = randomLine.trim();
+  
+      document.getElementById("quote-text").innerText = randomLine.trim();
     } catch (error) {
-      document.getElementById('quote-text').innerText = 'Failed to load. Try again.';
+      document.getElementById("quote-text").innerText = "Failed to load line. Try again.";
+      console.error(error);
     }
   }
-
+  
+  // Load once when page opens
   window.onload = generateLine;
 }
 

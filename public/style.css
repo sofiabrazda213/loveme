@@ -233,6 +233,13 @@ body {
   box-shadow: inset 0 0 10px #000, 0 0 10px #222;
 }
 
+quote-box {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+  margin-bottom: 1rem;
+}
+
 /* Poetic line text */
 #quote-text {
   color: white;
