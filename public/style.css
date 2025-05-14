@@ -8,6 +8,17 @@
   display: none !important;
 }
 
+[id*="calendly"],
+[class*="calendly"] {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  width: 0 !important;
+  pointer-events: none !important;
+}
+
+
 html, body {
   margin: 0;
   padding: 0;
@@ -393,10 +404,10 @@ quote-box {
 
 /* poem block */
 .poem-block {
-  position: relative; /* CHANGE from absolute */
+  position: relative;
   background-color: #f4f1be;
   padding: 2rem;
-  width: 600px; /* wider for longer lines */
+  width: 500px; /* for longer lines */
   margin: 2rem auto; /* centers it horizontally */
   cursor: move;
   font-family: 'Courier New', monospace;

@@ -53,7 +53,7 @@ if (window.location.pathname.includes("home.html")) {
   // Load one when page loads
   window.onload = generateLine;
 
-  // Optional: expose globally if you want to call it via button
+  // Optional: expose globally if you want to cal it via button
   window.generateLine = generateLine;
 }
 
