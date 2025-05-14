@@ -1,27 +1,22 @@
 /* style.css */
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   margin: 0;
   padding: 0;
-  background-color: black; /* loading default */
-  overflow: hidden;
+  background-color: #1f2573;
+  overflow-x: hidden;
 }
 
-body.loaded {
-  background-color: #1f2573; /* main page */
-  overflow-y: auto;
-  color: #fff;
-}
-/*
 body {
-    margin: 0;
-    padding: 0;
-    background-color: #1f2573;
-    color: #fff;
-    font-family: 'IBM Plex Mono', monospace;
-    height: auto;
-    overflow-y: auto;
-  }
-    */
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  height: auto;
+  overflow-y: auto;
+  background-color: #1f2573; /* deep blue */
+}
   
   /* Header Layout */
 .site-header {

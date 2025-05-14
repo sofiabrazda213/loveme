@@ -17,9 +17,6 @@ window.onload = () => {
         document.querySelector(".loading-screen").style.display = "none";
         document.querySelector(".nav-menu-screen").style.display = "flex";
 
-        document.body.classList.add("loaded");
-        //document.body.style.backgroundColor = "#1f2573";  switch after loading
-
         gsap.from(".nav-list li", {
           opacity: 0,
           y: 30,
