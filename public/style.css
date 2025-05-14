@@ -2,7 +2,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #000;
+    background-color: #1f2573;
     color: #fff;
     font-family: 'IBM Plex Mono', monospace;
     height: auto;
@@ -94,6 +94,16 @@ body {
   white-space: nowrap;
 }
 
+.nav-wrapper {
+  background-color: black;
+  border: 2px solid white;
+  padding-top: 40px;
+  padding: 30px;
+  margin: 0 auto;
+  width: fit-content;
+  max-width: 90%;
+  text-align: center;
+}
 
 /* Right Side Navigation */
 .header-nav a {
