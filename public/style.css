@@ -1,13 +1,17 @@
 /* style.css */
 html {
   background-color: black;
+  height: 100%;
 }
 
 body {
-  min-height: 100vh;
+  background-color: #1f2573; /* deep blue */
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
   margin: 0;
   padding: 0;
-  background-color: #1f2573;
+  min-height: 100vh;
+  overflow-y: auto;
 }
   
   /* Header Layout */

@@ -16,7 +16,7 @@ window.onload = () => {
       onComplete: () => {
         document.querySelector(".loading-screen").style.display = "none";
         document.querySelector(".nav-menu-screen").style.display = "flex";
-
+        document.body.classList.add("loaded");
         gsap.from(".nav-list li", {
           opacity: 0,
           y: 30,
