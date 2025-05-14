@@ -68,7 +68,7 @@ function closePost() {
   document.getElementById('blog-modal').classList.add('hidden');
 }
 
-// Draggable poem
+/* Draggable poem
 function makeDraggable(el) {
   let isDragging = false;
   let offsetX, offsetY;
@@ -103,5 +103,6 @@ function makeDraggable(el) {
 // Apply it
 const poem = document.getElementById('draggable-poem');
 makeDraggable(poem);
+*/
 
   
