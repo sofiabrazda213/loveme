@@ -18,11 +18,10 @@
   pointer-events: none !important;
 }
 
-
-html, body {
+html {
   margin: 0;
   padding: 0;
-  background-color: #1f2573;
+  background-color: black;
   overflow-x: hidden;
 }
 
