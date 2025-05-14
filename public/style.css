@@ -407,7 +407,8 @@ quote-box {
 .poem-block-three {
   background-color: #f4f1be;
   padding: 2rem;
-  width: 500px;
+  margin-left: 2rem;
+  width: 550px;
   font-family: 'Courier New', monospace;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   color: black;
