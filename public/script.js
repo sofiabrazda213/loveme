@@ -67,4 +67,41 @@ function openPost(id) {
 function closePost() {
   document.getElementById('blog-modal').classList.add('hidden');
 }
+
+// Draggable poem
+function makeDraggable(el) {
+  let isDragging = false;
+  let offsetX, offsetY;
+
+  el.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - el.getBoundingClientRect().left;
+    offsetY = e.clientY - el.getBoundingClientRect().top;
+    el.style.zIndex = 1000;
+  });
+
+  document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    const container = document.querySelector('.poetry-container');
+    const containerRect = container.getBoundingClientRect();
+    let x = e.clientX - containerRect.left - offsetX;
+    let y = e.clientY - containerRect.top - offsetY;
+
+    // Constrain within container
+    x = Math.max(0, Math.min(x, container.clientWidth - el.offsetWidth));
+    y = Math.max(0, Math.min(y, container.clientHeight - el.offsetHeight));
+
+    el.style.left = x + 'px';
+    el.style.top = y + 'px';
+  });
+
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+  });
+}
+
+// Apply it
+const poem = document.getElementById('draggable-poem');
+makeDraggable(poem);
+
   

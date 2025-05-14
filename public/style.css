@@ -249,6 +249,9 @@ body {
 
   /* Home - Right-side poetry container */
 .poetry-container {
+  position: relative;
+  /*width: 100%;
+  height: 600px; or however tall you want the area to be */
   width: 320px;
   height: 85vh;
   border: 2px solid white;
@@ -383,4 +386,22 @@ quote-box {
 
 .hidden {
   display: none;
+}
+
+/* poem block */
+.poem-block {
+  position: absolute;
+  background-color: #f4f1be;
+  padding: 1.5rem;
+  width: 300px;
+  cursor: move;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  color: black;
+}
+
+.poem-title {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1rem;
 }
