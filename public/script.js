@@ -8,22 +8,24 @@ gsap.to("#loading-text", {
 });
 
 // After 3 seconds, fade out loading screen and show nav
-setTimeout(() => {
-  gsap.to(".loading-screen", {
-    opacity: 0,
-    duration: 1,
-    onComplete: () => {
-      document.querySelector(".loading-screen").style.display = "none";
-      document.querySelector(".nav-menu-screen").style.display = "flex";
-      gsap.from(".nav-list li", {
-        opacity: 0,
-        y: 30,
-        stagger: 0.2,
-        duration: 1
-      });
-    }
-  });
-}, 3000);
+window.onload = () => {
+  setTimeout(() => {
+    gsap.to(".loading-screen", {
+      opacity: 0,
+      duration: 1,
+      onComplete: () => {
+        document.querySelector(".loading-screen").style.display = "none";
+        document.querySelector(".nav-menu-screen").style.display = "flex";
+        gsap.from(".nav-list li", {
+          opacity: 0,
+          y: 30,
+          stagger: 0.2,
+          duration: 1
+        });
+      }
+    });
+  }, 3000);
+};
 
 // Only run quote generator if on home.html
 // Only run quote generator if on home.html

@@ -1,4 +1,8 @@
 /* style.css */
+html {
+  background-color: black;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -92,17 +96,6 @@ body {
   pointer-events: none;
   transition: all 0.3s ease;
   white-space: nowrap;
-}
-
-.nav-wrapper {
-  background-color: black;
-  border: 2px solid white;
-  padding-top: 40px;
-  padding: 30px;
-  margin: 0 auto;
-  width: fit-content;
-  max-width: 90%;
-  text-align: center;
 }
 
 /* Right Side Navigation */
@@ -232,7 +225,18 @@ body {
   
   .nav-list a:hover {
     text-decoration: underline;
-  }  
+  } 
+  
+  .nav-wrapper {
+    background-color: black;
+    border: 2px solid white;
+    padding-top: 40px;
+    padding: 30px;
+    margin: 0 auto;
+    width: fit-content;
+    max-width: 90%;
+    text-align: center;
+  }
 
   /* Home - Right-side poetry container */
 .poetry-container {
