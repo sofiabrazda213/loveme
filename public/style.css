@@ -1,8 +1,17 @@
 /* style.css */
-html {
-  background-color: black;
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: black; /* loading default */
+  overflow: hidden;
 }
 
+body.loaded {
+  background-color: #1f2573; /* main page */
+  overflow-y: auto;
+  color: #fff;
+}
+/*
 body {
     margin: 0;
     padding: 0;
@@ -12,6 +21,7 @@ body {
     height: auto;
     overflow-y: auto;
   }
+    */
   
   /* Header Layout */
 .site-header {
