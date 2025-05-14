@@ -1,40 +1,19 @@
 /* style.css */
-* {
-  box-sizing: border-box;
-}
-
-.calendly-frame-tag,
-.calendly-lifecycle-optibutton_singleton {
-  display: none !important;
-}
-
-[id*="calendly"],
-[class*="calendly"] {
-  display: none !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  height: 0 !important;
-  width: 0 !important;
-  pointer-events: none !important;
-}
-
 html {
-  margin: 0;
-  padding: 0;
   background-color: black;
-  overflow-x: hidden;
 }
 
 body {
-  color: #fff;
-  font-family: 'IBM Plex Mono', monospace;
-  height: auto;
-  overflow-y: auto;
-  background-color: #1f2573; /* deep blue */
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #1f2573;
 }
   
   /* Header Layout */
 .site-header {
+  width: 100%;
+  box-sizing: border-box;  /* new */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
