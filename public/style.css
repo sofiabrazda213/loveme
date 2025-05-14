@@ -15,7 +15,7 @@ body {
   justify-content: space-between;
   align-items: flex-start;
   padding: 1rem 2rem;
-  background: black;
+  background: #1f2573;
   color: white;
   font-family: 'IBM Plex Mono', monospace;
   /*border-bottom: 1px solid white;*/
@@ -126,7 +126,7 @@ body {
   }
   
   .loading-screen {
-    position: absolute;
+    position: fixed; /* change from absolute to fixed */
     top: 0;
     left: 0;
     width: 100%;
@@ -136,7 +136,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 999;
+    z-index: 9999;
   }
 
   #loading-text {
@@ -190,12 +190,12 @@ body {
 
   /* Navigation screen layout */
 .nav-menu-screen {
+    background-color: black;
     position: fixed;
     top: 0; left: 0;
     width: 100%;
     height: 100vh;
-    background: black;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }
