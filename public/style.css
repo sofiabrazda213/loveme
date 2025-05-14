@@ -394,7 +394,19 @@ quote-box {
 }
 
 /* poem block */
-.poem-block {
+.poem-block-one {
+  position: relative;
+  background-color: #f4f1be;
+  padding: 2rem;
+  width: 500px; /* for longer lines */
+  margin: 2rem auto; /* centers it horizontally */
+  cursor: move;
+  font-family: 'Courier New', monospace;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+.poem-block-two {
   position: relative;
   background-color: #f4f1be;
   padding: 2rem;
