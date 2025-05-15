@@ -411,7 +411,7 @@ quote-box {
   width: 550px;
   font-family: 'Courier New', monospace;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 1px #cc47f5;
+  border: 2dvi #cc47f5;
   color: black;
 }
 
@@ -422,7 +422,8 @@ quote-box {
 }
 
 .me-image {
-  width: 200px;
+  width: 300px;
   height: auto; 
-  border: 1px #cc47f5;
+  border: 2px #cc47f5 !important;
+  align-items: center;
 }
