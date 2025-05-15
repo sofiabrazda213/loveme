@@ -411,6 +411,7 @@ quote-box {
   width: 550px;
   font-family: 'Courier New', monospace;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border: 1px #cc47f5;
   color: black;
 }
 
@@ -418,4 +419,10 @@ quote-box {
   text-align: center;
   font-weight: bold;
   margin-bottom: 1rem;
+}
+
+.me-image {
+  width: 200px;
+  height: auto; 
+  border: 1px #cc47f5;
 }
