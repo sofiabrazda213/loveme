@@ -411,7 +411,7 @@ quote-box {
   width: 550px;
   font-family: 'Courier New', monospace;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  border: 1px solid #cc47f5;
+  border: 2px solid #cc47f5;
   display: block;
   color: black;
 }
@@ -452,6 +452,13 @@ quote-box {
   margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
+  border: 2px solid #cc47f5;
+  box-shadow: 0 0 20px #cc47f5;
+  transition: box-shadow 0.3s ease;
+}
+
+.gallery-content:hover {
+  box-shadow: 0 0 20px #cc47f5;
 }
 
 .gallery-frame {
@@ -468,7 +475,7 @@ quote-box {
 .gallery-card {
   overflow: hidden;
   cursor: pointer;
-  border: 2px solid white;
+  border: 2px solid #cc47f5;
   transition: transform 0.3s ease;
 }
 
@@ -481,6 +488,53 @@ quote-box {
 
 .gallery-card:hover img {
   transform: scale(1.1);
+}
+
+/* Gallery modal */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9); /* black transparent bg */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+}
+
+.modal-content img {
+  max-width: 90vw;
+  max-height: 90vh;
+  box-shadow: 0 0 20px white;
+  border: 2px solid white;
+}
+
+.close-button {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 2rem;
+  color: white;
+  background: black;
+  border: 1px solid white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  line-height: 32px;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 /* Modal styles */
