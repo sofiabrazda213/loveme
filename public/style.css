@@ -447,10 +447,15 @@ quote-box {
 
 .content-frame.gallery-content {
   display: block !important;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
 }
 
 .gallery-content {
-  display: block;        /*✅ fixes flex*/
+  display: block;        /*fixes flex*/
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
