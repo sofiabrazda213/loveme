@@ -168,16 +168,16 @@ body {
   }
 
   /* Frame around content */
-.content-frame {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 90%;                /* reduce width to create margin on sides */
-  max-width: 1200px;         /* optional: limit how wide it can grow */
-  margin: 0 auto;            /* horizontally center the frame */
-  height: 100%;
-  padding: 0;
-  box-sizing: border-box;
+  .content-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;                 /*reduce width to create margin on sides*/
+    max-width: 1200px;          /*optional: limit how wide it can grow*/
+    margin: 0 auto;             /*horizontally center the frame*/
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
   }
 
   .content-frame:hover {
@@ -444,6 +444,15 @@ quote-box {
 }
 
 /* GALLERY.HTML BITCH */
+
+.gallery-content {
+  display: block; /* default */
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  box-sizing: border-box;
+}
 
 .gallery-frame {
   width: 100%;
