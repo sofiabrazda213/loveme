@@ -33,32 +33,32 @@
           <a href="blog.html">blog</a>
         </nav>
       </header>
-
+       <!-- GALLERY -->
       <main class="content-frame gallery-content">
-        <!-- GALLERY -->
         <div class="gallery-frame">
           <div class="gallery-grid">
             <div class="gallery-card" onclick="openImage('img1')">
-              <img src="flowersonmuni.png" alt="Image 1" />
-            </div>
-            <div class="gallery-card" onclick="openImage('img2')">
-              <img src="mercury2024.png" alt="Image 2" />
-            </div>
-            <div class="gallery-card" onclick="openImage('img3')">
-              <img src="skateinside.png" alt="Image 3" />
-            </div>
-            <!-- Add more images here -->
+                <img src="flowersonmuni.png" alt="Image 1" />
+              </div>
+        
+              <div class="gallery-card" onclick="openImage('img2')">
+                <img src="mercury2024.png" alt="Image 2" />
+              </div>
+        
+              <div class="gallery-card" onclick="openImage('img3')">
+                <img src="skateinside.png" alt="Image 3" />
+              </div>
           </div>
         </div>
       
         <!-- MODAL -->
         <div id="gallery-modal" class="modal hidden">
-          <div class="modal-overlay" onclick="closeImage()"></div>
-          <div class="modal-content">
-            <span class="close-button" onclick="closeImage()">&times;</span>
-            <img id="modal-image" src="" alt="Full View" />
+            <div class="modal-overlay" onclick="closeImage()"></div>
+            <div class="modal-content">
+              <span class="close-button" onclick="closeImage()">&times;</span>
+              <img id="modal-image" src="" alt="Full View" />
+            </div>
           </div>
-        </div>
       </main>      
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
