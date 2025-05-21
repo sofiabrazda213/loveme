@@ -456,7 +456,7 @@ quote-box {
 
 .gallery-frame {
   width: 100%;
-  padding: 2rem;
+  padding: 0;
 }
 
 .gallery-grid {
@@ -468,6 +468,7 @@ quote-box {
 .gallery-card {
   overflow: hidden;
   cursor: pointer;
+  border: 2px solid white;
   transition: transform 0.3s ease;
 }
 
