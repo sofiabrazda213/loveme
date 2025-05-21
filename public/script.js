@@ -105,4 +105,16 @@ const poem = document.getElementById('draggable-poem');
 makeDraggable(poem);
 */
 
+//gallery.html
+function openImage(imageId) {
+  const modal = document.getElementById("gallery-modal");
+  const modalImage = document.getElementById("modal-image");
+  modalImage.src = document.querySelector(`[onclick="openImage('${imageId}')"] img`).src;
+  modal.classList.remove("hidden");
+}
+
+function closeImage() {
+  document.getElementById("gallery-modal").classList.add("hidden");
+}
+
   
