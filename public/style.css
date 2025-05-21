@@ -446,12 +446,13 @@ quote-box {
 /* GALLERY.HTML BITCH */
 
 .gallery-frame {
+  width: 100%;
   padding: 2rem;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1rem;
 }
 
@@ -463,9 +464,9 @@ quote-box {
 
 .gallery-card img {
   width: 100%;
-  height: auto;
+  height: 220px; /* Or whatever height you want */
+  object-fit: cover;
   display: block;
-  transition: transform 0.3s ease;
 }
 
 .gallery-card:hover img {
