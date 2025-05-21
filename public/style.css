@@ -445,17 +445,8 @@ quote-box {
 
 /* GALLERY.HTML BITCH */
 
-.content-frame.gallery-content {
-  display: block !important;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
-  box-sizing: border-box;
-}
-
 .gallery-content {
-  display: block;        /*fixes flex*/
+  display: block;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
@@ -482,7 +473,7 @@ quote-box {
 
 .gallery-card img {
   width: 100%;
-  height: 220px; /* Or whatever height you want */
+  height: 220px;
   object-fit: cover;
   display: block;
 }
