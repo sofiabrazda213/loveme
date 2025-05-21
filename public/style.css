@@ -445,8 +445,12 @@ quote-box {
 
 /* GALLERY.HTML BITCH */
 
+.content-frame.gallery-content {
+  display: block !important;
+}
+
 .gallery-content {
-  display: block; /* default */
+  display: block;        /*✅ fixes flex*/
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
