@@ -515,7 +515,6 @@ quote-box {
   align-items: center;
 
   border: 2px solid white;
-  box-shadow: 0 0 20px 4px white; /* Brighter & tighter */
   background-color: transparent;;
   border-radius: 6px;
   overflow: hidden;
@@ -525,6 +524,7 @@ quote-box {
   width: 500px;
   height: auto;
   object-fit: contain;
+  box-shadow: 0 0 20px 4px white; /* Brighter & tighter */
   display: block;
   margin: 0 auto;
 }
@@ -572,7 +572,7 @@ quote-box {
 
 .close-button {
   position: absolute;
-  top: 10px;
+  top: 7px;
   right: 20px;
   font-size: 2rem;
   color: #cc47f5;
