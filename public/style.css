@@ -508,7 +508,11 @@ quote-box {
 }
 
 .modal-content {
-  position: relative;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content img {
@@ -516,8 +520,9 @@ quote-box {
   height: 500px;        /* Fixed height */
   object-fit: contain;  /* Keeps aspect ratio, fits inside */
   border: 2px solid white;
-  box-shadow: 0 0 20px white;
+  box-shadow: 0 0 10px 4px white;
   display: block;
+  margin: 0 auto;
 }
 
 .close-button {
