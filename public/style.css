@@ -522,8 +522,8 @@ quote-box {
 }
 
 .modal-content img {
-  max-width: 80%;
-  max-height: 80%;
+  width: 500px;
+  height: auto;
   object-fit: contain;
   box-shadow: 0 0 20px 4px white; /* Glow */
   display: block;
@@ -532,8 +532,8 @@ quote-box {
 
 .close-button {
   position: absolute;
-  top: -10px;
-  right: -10px;
+  top: -15px;
+  right: -15px;
   font-size: 2rem;
   color: white;
   background: black;
@@ -573,7 +573,7 @@ quote-box {
 
 .close-button {
   position: absolute;
-  top: 7px;
+  top: 10px;
   right: 20px;
   font-size: 2rem;
   color: #cc47f5;
