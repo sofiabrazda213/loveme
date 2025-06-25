@@ -22,7 +22,6 @@
           <!-- Title and Subtitle Container -->
           <div class="title-container">
             <a href="home.html" class="site-title">In bloom</a>
-            <!-- <p class="site-subtitle">a poetic interface</p> -->
           </div>
         </div>
   
@@ -36,24 +35,29 @@
        <!-- GALLERY -->
        <main class="gallery-content">
         <div class="gallery-frame">
-          <div class="gallery-grid">
 
-            <div class="gallery-card internet-preview" onclick="openGalleryScroll()">
-              <img src="site_image.png" alt="DE L'INTERNET">
-              <p>DE L'INTERNET</p>
-            </div>
-      
-            <div class="gallery-card" onclick="openImage('img1')">
-              <img src="flowersonmuni.png" alt="Image 1" />
-            </div>
-            <div class="gallery-card" onclick="openImage('img2')">
-              <img src="mercury2024.png" alt="Image 2" />
-            </div>
-            <div class="gallery-card" onclick="openImage('img3')">
-              <img src="skateinside.png" alt="Image 3" />
-            </div>
+        <!-- Put the DE L'INTERNET preview on its own row -->
+      <div class="gallery-top">
+        <div class="gallery-card internet-preview" onclick="openGalleryScroll()">
+          <img src="portal.png" alt="PORTAL">
+          <p>portal of my heart</p>
+        </div>
+      </div>
+
+          <!-- Rest of the gallery goes below -->
+        <div class="gallery-bottom gallery-grid">
+          <div class="gallery-card" onclick="openImage('img1')">
+          <img src="flowersonmuni.png" alt="Image 1" />
+        </div>
+        <div class="gallery-card" onclick="openImage('img2')">
+          <img src="mercury2024.png" alt="Image 2" />
+        </div>
+          <div class="gallery-card" onclick="openImage('img3')">
+            <img src="skateinside.png" alt="Image 3" />
           </div>
         </div>
+        </div>
+
         <div id="gallery-modal" class="modal hidden">
             <div class="modal-overlay" onclick="closeImage()"></div>
             <div class="modal-content">
@@ -61,6 +65,7 @@
               <img id="modal-image" src="" alt="Full View" />
             </div>
           </div>
+          
           <!-- Scrollable Gallery Modal -->
           <div id="scroll-gallery-modal" class="modal hidden">
             <span class="close-button" onclick="closeGalleryScroll()">&times;</span>
