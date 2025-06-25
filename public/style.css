@@ -178,6 +178,11 @@ body {
     height: 100%;
     padding: 0;
     box-sizing: border-box;
+
+    background-image: url('site_image.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
   }
 
   .content-frame:hover {
