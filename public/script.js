@@ -117,4 +117,11 @@ function closeImage() {
   document.getElementById("gallery-modal").classList.add("hidden");
 }
 
+function openGalleryScroll() {
+  document.getElementById("scroll-gallery-modal").classList.remove("hidden");
+}
+
+function closeGalleryScroll() {
+  document.getElementById("scroll-gallery-modal").classList.add("hidden");
+}
   
