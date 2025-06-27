@@ -106,10 +106,10 @@ makeDraggable(poem);
 */
 
 //gallery.html
-function openImage(imageId) {
+function openImage(imageSrc) {
   const modal = document.getElementById("gallery-modal");
   const modalImage = document.getElementById("modal-image");
-  modalImage.src = document.querySelector(`[onclick="openImage('${imageId}')"] img`).src;
+  modalImage.src = imageSrc;
   modal.classList.remove("hidden");
 }
 
