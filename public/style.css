@@ -108,7 +108,8 @@ body {
   white-space: nowrap;
 }
 
-/* Right Side Navigation */
+
+/* Desktop (default) */
 .header-nav a {
   margin-left: 1.5rem;
   color: white;
@@ -117,16 +118,22 @@ body {
   font-size: 1rem;
 }
 
-.header-nav a:hover {
-  text-decoration: underline;
-}
-  
-  nav a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 1rem;
-    font-weight: bold;
+/* Responsive (mobile/tablet) */
+@media screen and (max-width: 768px) {
+  .header-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.5rem;
   }
+
+  .header-nav a {
+    margin-left: 0;
+    display: block;
+    text-decoration: underline;
+  }
+}
   
   .loading-screen {
     position: fixed; /* change from absolute to fixed */
@@ -170,22 +177,22 @@ body {
   /* Frame around content */
   .content-frame {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 90%;                 /*reduce width to create margin on sides*/
-    max-width: 1200px;          /*optional: limit how wide it can grow*/
-    margin: 0 auto;             /*horizontally center the frame*/
-    height: 100%;
-    padding: 0;
-    box-sizing: border-box;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 
-    height: auto;
-    min-height: 100vh;
+  /* FIXED HEIGHT HANDLING */
+  min-height: 100vh; /* always at least full screen height */
 
-    background-image: url('site-image1.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: center;
+  /* BACKGROUND IMAGE */
+  background-image: url('site-image1.png');
+  background-size: cover;          /* spans full frame */
+  background-repeat: no-repeat;
+  background-position: center center;
   }
 
   .content-frame:hover {
