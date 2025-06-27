@@ -524,6 +524,8 @@ quote-box {
 .gallery-container {
   display: flex;
   min-height: 100vh;
+  height: 100vh; /* nables vertical scroll */
+  overflow: hidden;
 }
 
 .gallery-nav {
@@ -531,6 +533,10 @@ quote-box {
   background-color: #0d1b3d;
   color: white;
   padding: 2rem;
+  overflow-y: auto;
+  height: 100vh;
+  box-sizing: border-box;
+  background-image: url('site-image1.png');
 }
 
 .gallery-nav ul {
