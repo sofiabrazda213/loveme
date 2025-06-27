@@ -510,14 +510,43 @@ quote-box {
 }
 
 .gallery-card img {
-  width: 100%;
+  max-width: 100%;
   height: 220px;
   object-fit: cover;
   display: block;
+  margin-bottom: 1rem;
 }
 
 .gallery-card:hover img {
   transform: scale(1.1);
+}
+
+.gallery-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.gallery-nav {
+  width: 25%;
+  background-color: #0d1b3d;
+  color: white;
+  padding: 2rem;
+}
+
+.gallery-nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+.gallery-nav li {
+  margin-bottom: 1rem;
+}
+
+.gallery-display {
+  width: 75%;
+  padding: 2rem;
+  background-color: #1e2d58;
+  overflow-y: auto;
 }
 
 /* Gallery modal */

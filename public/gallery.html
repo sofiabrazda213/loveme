@@ -32,55 +32,59 @@
           <a href="blog.html">blog</a>
         </nav>
       </header>
+
+
        <!-- GALLERY -->
-       <main class="gallery-content">
-        <div class="gallery-frame">
+       <!-- GALLERY SPLIT PANEL -->
+<div class="gallery-container">
+  <!-- LEFT PANEL: Navigation -->
+  <aside class="gallery-nav">
+    <h2>Gallery Menu</h2>
+    <ul>
+      <li><a href="#" onclick="loadGallerySection('portal')">Portal of My Heart</a></li>
+      <li><a href="#" onclick="loadGallerySection('main')">Main Gallery</a></li>
+      <li><a href="#" onclick="loadGallerySection('scroll')">Scrollable Modal</a></li>
+    </ul>
+  </aside>
 
-        <!-- PORTAL OF MY HEART on it own row -->
-      <div class="gallery-top">
-        <div class="gallery-card internet-preview" onclick="openGalleryScroll()">
-          <img src="portal.png" alt="PORTAL">
-          <p>portal of my heart</p>
-        </div>
-      </div>
+  <!-- RIGHT PANEL: Dynamic Content -->
+  <section class="gallery-display" id="gallery-display">
+    <!-- Default view will load here -->
+    <p>Select a section from the left to begin.</p>
+  </section>
+</div>
 
-          <!-- Rest of the gallery goes below -->
+<script>
+  function loadGallerySection(section) {
+    const display = document.getElementById("gallery-display");
+
+    if (section === 'portal') {
+      display.innerHTML = `
+        <div class="gallery-top">
+          <div class="gallery-card internet-preview">
+            <img src="portal.png" alt="PORTAL">
+            <p>portal of my heart</p>
+          </div>
+        </div>`;
+    } else if (section === 'main') {
+      display.innerHTML = `
         <div class="gallery-bottom gallery-grid">
-          <div class="gallery-card" onclick="openImage('img1')">
-          <img src="flowersonmuni.png" alt="Image 1" />
-        </div>
-        <div class="gallery-card" onclick="openImage('img2')">
-          <img src="mercury2024.png" alt="Image 2" />
-        </div>
-          <div class="gallery-card" onclick="openImage('img3')">
-            <img src="skateinside.png" alt="Image 3" />
-          </div>
-        </div>
-        </div>
-
-        <div id="gallery-modal" class="modal hidden">
-            <div class="modal-overlay" onclick="closeImage()"></div>
-            <div class="modal-content">
-              <span class="close-button" onclick="closeImage()">&times;</span>
-              <img id="modal-image" src="" alt="Full View" />
-            </div>
-          </div>
-          
-          <!-- Scrollable Gallery Modal -->
-          <div id="scroll-gallery-modal" class="modal hidden">
-            <span class="close-button" onclick="closeGalleryScroll()">&times;</span>
-            <div class="scroll-gallery-content">
-            <img src="bow-art.png" alt="">
-            <img src="girl-with-gun.png" alt="">
-            <img src="hm.png" alt="">
-            <img src="i-live-life-in-color.png" alt="">
-            <img src="i-will-treasure-you..png" alt="">
-            <img src="lady-mujer.png" alt="">
-            </div>
-          </div>
-      </main> 
-
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-      <script src="script.js"></script>
+          <div class="gallery-card"><img src="flowersomunni.png" alt="Image 1" /></div>
+          <div class="gallery-card"><img src="mercury2024.png" alt="Image 2" /></div>
+          <div class="gallery-card"><img src="skateinside.png" alt="Image 3" /></div>
+        </div>`;
+    } else if (section === 'scroll') {
+      display.innerHTML = `
+        <div class="scroll-gallery-content">
+          <img src="bow-art.png" alt="">
+          <img src="girl-with-gun.png" alt="">
+          <img src="hm.png" alt="">
+          <img src="i-live-life-in-color.png" alt="">
+          <img src="i-will-treasure-you.png" alt="">
+          <img src="lady-mujer.png" alt="">
+        </div>`;
+    }
+  }
+</script>
   </body>
 </html>
