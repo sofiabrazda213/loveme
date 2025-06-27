@@ -148,8 +148,8 @@
 } else if (section === 'portal') {
   display.innerHTML = `
   <div class="gallery-top">
-    <div class="gallery-card internet-preview" onclick="openImage('images/sketchbook/portal.png')">
-      <img src="portal.png" alt="PORTAL">
+    <div class="gallery-card internet-preview">
+    <img src="images/sketchbook/portal.png" alt="PORTAL" onclick="openImage(this.src)">
       <p>portal of my heart</p>
     </div>
   </div>`;
