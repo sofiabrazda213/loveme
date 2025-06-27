@@ -112,6 +112,7 @@ function openImage(imageSrc) {
   modalImage.src = imageSrc;
   modal.classList.remove("hidden");
 }
+window.openImage = openImage;
 
 function closeImage() {
   document.getElementById("gallery-modal").classList.add("hidden");
