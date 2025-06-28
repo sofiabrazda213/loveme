@@ -710,6 +710,19 @@ quote-box {
   height: 100%;
 }
 
+#gallery-modal {
+  overflow-y: auto;
+  max-height: 90vh; /* or 100vh - padding */
+}
+
+#modal-image-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem; /* spacing between images */
+  align-items: center;
+  padding: 2rem;
+}
+
 /* Scroll gallery modal */
 .scroll-gallery-content {
   display: flex;
