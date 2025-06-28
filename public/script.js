@@ -168,17 +168,17 @@ function loadGallerySection(section) {
       'hm.png',
       'i-live-life-in-color.png',
       'i-will-treasure-you..png',        // <-- keep double dot if that's the filename
-  'lady-mujer.png',
-  "maybe-now-you'll-get-it.png",     // <-- preserve apostrophe
-  'muy-muy-rockera.png',
-  'muy-rockera.png',
-  'on-a-pink-bed.png',
-  'portal.png',
-  'skull-man.png',
-  'Sofia-xx.png',
-  'take-my-heart-but-not-my-art.png',
-  'well-it-is.png',
-  'well-itsmy-art.png'
+      'lady-mujer.png',
+      "maybe-now-you'll-get-it.png",     // <-- preserve apostrophe
+      'muy-muy-rockera.png',
+      'muy-rockera.png',
+      'on-a-pink-bed.png',
+      'portal.png',
+      'skull-man.png',
+      'Sofia-xx.png',
+      'take-my-heart-but-not-my-art.png',
+      'well-it-is.png',
+      'well-itsmy-art.png'
     ];
 
     // Inject thumbnail with click handler
