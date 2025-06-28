@@ -693,9 +693,16 @@ quote-box {
 }
 
 .internet-preview img {
-  max-width: 100%;
+  max-width: 85%;
   max-height: 85%;
   object-fit: contain;
+}
+
+.portal-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
 }
 
 /* Scroll gallery modal */
