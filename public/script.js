@@ -162,59 +162,23 @@ function loadGallerySection(section) {
   }
 
   else if (section === 'portal') {
-    display.innerHTML = `
-  <div class="portal-gallery">
-    <div class="internet-preview">
-      <img src="images/sketchbook/bow-art.png" alt="bow-art.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/girl-with-gun.png" alt="girl-with-gun.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/hm.png" alt="hm.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/i-live-life-in-color.png" alt="i-live-life-in-color.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/i-will-treasure-you.png" alt="i-will-treasure-you.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/lady-mujer.png" alt="lady-mujer.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/maybe-now-youll-get-it.png" alt="maybe-now-youll-get-it.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/muy-muy-rockera.png" alt="muy-muy-rockera.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/muy-rockera.png" alt="muy-rockera.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/on-a-pink-bed.png" alt="on-a-pink-bed.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/portal.png" alt="portal.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/skull-man.png" alt="skull-man.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/Sofia-xx.png" alt="Sofia-xx.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/take-my-heart-but-not-my-art.png" alt="take-my-heart-but-not-my-art.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/well-it-is.png" alt="well-it-is.png">
-    </div>
-    <div class="internet-preview">
-      <img src="images/sketchbook/well-itsmy-art.png" alt="well-itsmy-art.png">
-    </div>
-  </div>
-`;
+    const images = [
+      'bow-art.png', 'girl-with-gun.png', 'hm.png', 'i-live-life-in-color.png',
+      'i-will-treasure-you.png', 'lady-mujer.png', 'maybe-now-youll-get-it.png',
+      'muy-muy-rockera.png', 'muy-rockera.png', 'on-a-pink-bed.png',
+      'portal.png', 'skull-man.png', 'Sofia-xx.png',
+      'take-my-heart-but-not-my-art.png', 'well-it-is.png', 'well-itsmy-art.png'
+    ];
 
+    // Inject thumbnail with click handler
+    display.innerHTML = `
+      <div class="portal-gallery">
+        <div class="internet-preview" onclick='openPortalGallery(${JSON.stringify(images)})'>
+          <img src="images/sketchbook/${images[0]}" alt="Preview Image">
+          <p class="preview-label">Click to view full portal</p>
+        </div>
+      </div>
+    `;
   }
 }
 
