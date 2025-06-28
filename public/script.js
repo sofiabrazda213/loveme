@@ -68,44 +68,7 @@ function closePost() {
   document.getElementById('blog-modal').classList.add('hidden');
 }
 
-/* Draggable poem
-function makeDraggable(el) {
-  let isDragging = false;
-  let offsetX, offsetY;
-
-  el.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    offsetX = e.clientX - el.getBoundingClientRect().left;
-    offsetY = e.clientY - el.getBoundingClientRect().top;
-    el.style.zIndex = 1000;
-  });
-
-  document.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    const container = document.querySelector('.poetry-container');
-    const containerRect = container.getBoundingClientRect();
-    let x = e.clientX - containerRect.left - offsetX;
-    let y = e.clientY - containerRect.top - offsetY;
-
-    // Constrain within container
-    x = Math.max(0, Math.min(x, container.clientWidth - el.offsetWidth));
-    y = Math.max(0, Math.min(y, container.clientHeight - el.offsetHeight));
-
-    el.style.left = x + 'px';
-    el.style.top = y + 'px';
-  });
-
-  document.addEventListener('mouseup', () => {
-    isDragging = false;
-  });
-}
-
-// Apply it
-const poem = document.getElementById('draggable-poem');
-makeDraggable(poem);
-*/
-
-
+// 35mm photography load
   function loadGallerySection(section) {
     const display = document.getElementById("gallery-display");
 
@@ -197,6 +160,7 @@ makeDraggable(poem);
       </div>
     </div>`;
 
+// 'Portal to my heart' load   
 } else if (section === 'portal') {
   const display = document.getElementById('gallery-display');
   const images = [
@@ -206,7 +170,7 @@ makeDraggable(poem);
     'i-live-life-in-color.png',
     'i-will-treasure-you..png',
     'lady-mujer.png',
-    'maybe-now-you\'ll-get-it.png',
+    'maybe-now-you’ll-get-it.png',
     'muy-muy-rockera.png',
     'muy-rockera.png',
     'on-a-pink-bed.png',
@@ -217,28 +181,39 @@ makeDraggable(poem);
     'well-it-is.png',
     'well-itsmy-art.png'
   ];
+}  
 
-  display.innerHTML = `
-    <div class="portal-gallery">
-      ${images.map(src => `
-        <div class="gallery-card internet-preview">
-          <img src="images/sketchbook/${src}" alt="${src}" onclick="openPortalGallery(${JSON.stringify(images)})">
-        </div>
-      `).join('')}
-    </div>
-  `;
+  }
 
-    } else if (section === 'scroll') {
-      display.innerHTML = `
-        <div class="scroll-gallery-content">
-          <img src="bow-art.png" alt="">
-          <img src="girl-with-gun.png" alt="">
-          <img src="hm.png" alt="">
-          <img src="i-live-life-in-color.png" alt="">
-          <img src="i-will-treasure-you.png" alt="">
-          <img src="lady-mujer.png" alt="">
-        </div>`;
-    }
+
+  function openGalleryModal() {
+    const images = [
+      'bow-art.png',
+      'girl-with-gun.png',
+      'hm.png',
+      'i-live-life-in-color.png',
+      'i-will-treasure-you.png',
+      'lady-mujer.png',
+      'maybe-now-you\u2019ll-get-it.png',
+      'muy-muy-rockera.png',
+      'on-a-pink-bed.png',
+      'portal.png',
+      'skull-man.png',
+      'Sofia-xx.png',
+      'take-my-heart-but-not-my-art.png',
+      'well-it-is.png',
+      'well-itsmy-art.png'
+    ];
+  
+    const container = document.getElementById('modal-image-container');
+    container.innerHTML = images.map(src => `
+      <figure class="modal-image-item">
+        <img src="images/sketchbook/${src}" alt="${src}">
+        <figcaption>${src.replace(/[-_]/g, ' ').replace(/\.png$/, '')}</figcaption>
+      </figure>
+    `).join('');
+  
+    document.getElementById('gallery-modal').classList.remove('hidden');
   }
 
 //gallery.html
