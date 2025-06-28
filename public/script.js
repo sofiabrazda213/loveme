@@ -69,16 +69,12 @@ function closePost() {
 }
 
 // LOAD GALLERY
-// 35mm photography load
-  function loadGallerySection(section) {
-    const display = document.getElementById("gallery-display");
+function loadGallerySection(section) {
+  const display = document.getElementById("gallery-display");
 
-    if (section === 'photography') {
-      display.innerHTML = `
-    <div class="photo-grid-scroll">
-      <div class="photo-grid">
-        ${[
-          'b-w72.JPG',
+  if (section === 'photography') {
+    const images = [
+      'b-w72.JPG',
           'b-w71.JPG',
           'b-w70.JPG',
           'b-w69.JPG',
@@ -150,63 +146,59 @@ function closePost() {
           'b-w3.jpg',
           'b-w2.jpg',
           'b-w1.jpg'
-]
-          .map(
-            (src) => `
-              <div class="photo-tile">
-                <img src="images/b-w/${src}" alt="${src}" loading="lazy">
-              </div>`
-          )
-          .join('')}
-      </div>
-    </div>`;
+    ];
 
-// 'Portal to my heart' load   
-} else if (section === 'portal') {
-  const images = [
-    'bow-art.png', 'girl-with-gun.png', 'hm.png',
-    'i-live-life-in-color.png', 'i-will-treasure-you.png', 'lady-mujer.png',
-    'maybe-now-you\'ll-get-it.png', 'muy-muy-rockera.png', 'muy-rockera.png',
-    'on-a-pink-bed.png', 'portal.png', 'skull-man.png',
-    'Sofia-xx.png', 'take-my-heart-but-not-my-art.png',
-    'well-it-is.png', 'well-itsmy-art.png'
-  ];
-}  
-// Create the thumbnail preview that opens modal
-display.innerHTML = `
-<div class="portal-gallery">
-  <div class="gallery-card preview-card" onclick="openPortalGallery(${JSON.stringify(images)})">
-    <img src="images/sketchbook/${images[0]}" alt="Preview Image">
-    <p class="preview-label">Click to view full portal</p>
-  </div>
-</div>
-`;
+    display.innerHTML = `
+      <div class="photo-grid-scroll">
+        <div class="photo-grid">
+          ${images.map(src => `
+            <div class="photo-tile">
+              <img src="images/b-w/${src}" alt="${src}" loading="lazy">
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    `;
   }
 
-// Modal image viewer (vertical scroll of all images)
+  else if (section === 'portal') {
+    const images = [
+      'bow-art.png', 'girl-with-gun.png', 'hm.png', 'i-live-life-in-color.png',
+      'i-will-treasure-you.png', 'lady-mujer.png', 'maybe-now-youll-get-it.png',
+      'muy-muy-rockera.png', 'muy-rockera.png', 'on-a-pink-bed.png',
+      'portal.png', 'skull-man.png', 'Sofia-xx.png',
+      'take-my-heart-but-not-my-art.png', 'well-it-is.png', 'well-itsmy-art.png'
+    ];
+
+    // Inject thumbnail with click handler
+    display.innerHTML = `
+      <div class="portal-gallery">
+        <div class="gallery-card preview-card" onclick='openPortalGallery(${JSON.stringify(images)})'>
+          <img src="images/sketchbook/${images[0]}" alt="Preview Image">
+          <p class="preview-label">Click to view full portal</p>
+        </div>
+      </div>
+    `;
+  }
+}
+
+// OPEN MODAL GALLERY
 function openPortalGallery(images) {
   const container = document.getElementById('modal-image-container');
   container.innerHTML = images.map(src => `
     <img src="images/sketchbook/${src}" alt="${src}" class="modal-image-item">
   `).join('');
+
   document.getElementById('gallery-modal').classList.remove('hidden');
 }
 
+// CLOSE MODAL
 function closeImage() {
   document.getElementById('gallery-modal').classList.add('hidden');
-  document.getElementById('modal-image-container').innerHTML = ''; // Clear images
+  document.getElementById('modal-image-container').innerHTML = '';
 }
 
-window.openImage = openImage;
-window.closeImage = closeImage;
-window.openPortalGallery = openPortalGallery;
+// Expose to global scope
 window.loadGallerySection = loadGallerySection;
-
-function openGalleryScroll() {
-  document.getElementById("scroll-gallery-modal").classList.remove("hidden");
-}
-
-function closeGalleryScroll() {
-  document.getElementById("scroll-gallery-modal").classList.add("hidden");
-}
-  
+window.openPortalGallery = openPortalGallery;
+window.closeImage = closeImage;
