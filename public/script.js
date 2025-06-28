@@ -197,14 +197,24 @@ makeDraggable(poem);
       </div>
     </div>`;
 } else if (section === 'portal') {
-  display.innerHTML = `
-  <div class="gallery-top">
-    <div class="gallery-card internet-preview">
-    <img src="images/sketchbook/portal.png" alt="PORTAL" onclick="openImage(this.src)">
-      <p>portal of my heart</p>
-    </div>
-  </div>`;
-
+  const images = [
+    'bow-art.png',
+    'girl-with-gun.png',
+    'hm.png',
+    'i-live-life-in-color.png',
+    'i-will-treasure-you..png',
+    'lady-mujer.png',
+    'maybe-now-you\'ll-get-it.png',
+    'muy-muy-rockera.png',
+    'muy-rockera.png',
+    'on-a-pink-bed.png',
+    'portal.png',
+    'skull-man.png',
+    'Sofia-xx.png',
+    'take-my-heart-but-not-my-art.png',
+    'well-it-is.png',
+    'well-itsmy-art.png'
+  ];
     } else if (section === 'scroll') {
       display.innerHTML = `
         <div class="scroll-gallery-content">
