@@ -182,9 +182,11 @@ function loadGallerySection(section) {
     ];
 
     // Inject thumbnail with click handler
-    display.innerHTML = `
+    window.portalImages = images; // Expose it globally
+
+display.innerHTML = `
   <div class="portal-gallery">
-    <div class="internet-preview" onclick="openPortalGallery(${JSON.stringify(images)})">
+    <div class="internet-preview" onclick="openPortalGallery(window.portalImages)">
       <img src="images/sketchbook/${images[0]}" alt="Preview Image">
       <p class="preview-label">Click to view full portal</p>
     </div>
