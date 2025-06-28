@@ -183,13 +183,13 @@ function loadGallerySection(section) {
 
     // Inject thumbnail with click handler
     display.innerHTML = `
-      <div class="portal-gallery">
-        <div class="internet-preview" onclick='openPortalGallery(${JSON.stringify(images)})'>
-          <img src="images/sketchbook/${images[0]}" alt="Preview Image">
-          <p class="preview-label">Click to view full portal</p>
-        </div>
-      </div>
-    `;
+  <div class="portal-gallery">
+    <div class="internet-preview" onclick="openPortalGallery(${JSON.stringify(images)})">
+      <img src="images/sketchbook/${images[0]}" alt="Preview Image">
+      <p class="preview-label">Click to view full portal</p>
+    </div>
+  </div>
+`;
   }
 }
 
