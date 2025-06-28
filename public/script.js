@@ -197,6 +197,8 @@ makeDraggable(poem);
       </div>
     </div>`;
 } else if (section === 'portal') {
+  const display = document.getElementById('gallery-display');
+  
   const images = [
     'bow-art.png',
     'girl-with-gun.png',
@@ -220,12 +222,12 @@ makeDraggable(poem);
     <div class="portal-gallery">
       ${images.map(src => `
         <div class="gallery-card internet-preview">
-          <img src="images/sketchbook/${src}" alt="${src}" onclick="openImage(this.src)">
+          <img src="images/sketchbook/${src}" alt="${src}">
         </div>
       `).join('')}
     </div>
   `;
-  
+
     } else if (section === 'scroll') {
       display.innerHTML = `
         <div class="scroll-gallery-content">
@@ -240,19 +242,22 @@ makeDraggable(poem);
   }
 
 //gallery.html
-function openImage(imageSrc) {
-  const modal = document.getElementById("gallery-modal");
-  const modalImage = document.getElementById("modal-image");
-  modalImage.src = imageSrc;
-  modal.classList.remove("hidden");
+function openPortalGallery(images) {
+  const container = document.getElementById('modal-image-container');
+  container.innerHTML = images.map(src => `
+    <img src="images/sketchbook/${src}" alt="${src}" class="modal-image-item">
+  `).join('');
+  document.getElementById('gallery-modal').classList.remove('hidden');
 }
 
 function closeImage() {
-  document.getElementById("gallery-modal").classList.add("hidden");
+  document.getElementById('gallery-modal').classList.add('hidden');
+  document.getElementById('modal-image-container').innerHTML = ''; // Clear images
 }
 
 window.openImage = openImage;
 window.closeImage = closeImage;
+window.openPortalGallery = openPortalGallery;
 
 function openGalleryScroll() {
   document.getElementById("scroll-gallery-modal").classList.remove("hidden");
