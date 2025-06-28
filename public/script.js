@@ -196,9 +196,9 @@ makeDraggable(poem);
           .join('')}
       </div>
     </div>`;
+
 } else if (section === 'portal') {
   const display = document.getElementById('gallery-display');
-  
   const images = [
     'bow-art.png',
     'girl-with-gun.png',
@@ -222,7 +222,7 @@ makeDraggable(poem);
     <div class="portal-gallery">
       ${images.map(src => `
         <div class="gallery-card internet-preview">
-          <img src="images/sketchbook/${src}" alt="${src}">
+          <img src="images/sketchbook/${src}" alt="${src}" onclick="openPortalGallery(${JSON.stringify(images)})">
         </div>
       `).join('')}
     </div>

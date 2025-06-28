@@ -722,3 +722,8 @@ quote-box {
   gap: 1rem;
   align-items: center;
 }
+
+.scrollable-images {
+  max-height: 80vh;
+  overflow-y: scroll;
+}
