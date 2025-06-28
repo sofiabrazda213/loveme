@@ -68,6 +68,7 @@ function closePost() {
   document.getElementById('blog-modal').classList.add('hidden');
 }
 
+// LOAD GALLERY
 // 35mm photography load
   function loadGallerySection(section) {
     const display = document.getElementById("gallery-display");
@@ -162,61 +163,27 @@ function closePost() {
 
 // 'Portal to my heart' load   
 } else if (section === 'portal') {
-  const display = document.getElementById('gallery-display');
   const images = [
-    'bow-art.png',
-    'girl-with-gun.png',
-    'hm.png',
-    'i-live-life-in-color.png',
-    'i-will-treasure-you..png',
-    'lady-mujer.png',
-    'maybe-now-you’ll-get-it.png',
-    'muy-muy-rockera.png',
-    'muy-rockera.png',
-    'on-a-pink-bed.png',
-    'portal.png',
-    'skull-man.png',
-    'Sofia-xx.png',
-    'take-my-heart-but-not-my-art.png',
-    'well-it-is.png',
-    'well-itsmy-art.png'
+    'bow-art.png', 'girl-with-gun.png', 'hm.png',
+    'i-live-life-in-color.png', 'i-will-treasure-you.png', 'lady-mujer.png',
+    'maybe-now-you\'ll-get-it.png', 'muy-muy-rockera.png', 'muy-rockera.png',
+    'on-a-pink-bed.png', 'portal.png', 'skull-man.png',
+    'Sofia-xx.png', 'take-my-heart-but-not-my-art.png',
+    'well-it-is.png', 'well-itsmy-art.png'
   ];
 }  
-
+// Create the thumbnail preview that opens modal
+display.innerHTML = `
+<div class="portal-gallery">
+  <div class="gallery-card preview-card" onclick="openPortalGallery(${JSON.stringify(images)})">
+    <img src="images/sketchbook/${images[0]}" alt="Preview Image">
+    <p class="preview-label">Click to view full portal</p>
+  </div>
+</div>
+`;
   }
 
-
-  function openGalleryModal() {
-    const images = [
-      'bow-art.png',
-      'girl-with-gun.png',
-      'hm.png',
-      'i-live-life-in-color.png',
-      'i-will-treasure-you.png',
-      'lady-mujer.png',
-      'maybe-now-you\u2019ll-get-it.png',
-      'muy-muy-rockera.png',
-      'on-a-pink-bed.png',
-      'portal.png',
-      'skull-man.png',
-      'Sofia-xx.png',
-      'take-my-heart-but-not-my-art.png',
-      'well-it-is.png',
-      'well-itsmy-art.png'
-    ];
-  
-    const container = document.getElementById('modal-image-container');
-    container.innerHTML = images.map(src => `
-      <figure class="modal-image-item">
-        <img src="images/sketchbook/${src}" alt="${src}">
-        <figcaption>${src.replace(/[-_]/g, ' ').replace(/\.png$/, '')}</figcaption>
-      </figure>
-    `).join('');
-  
-    document.getElementById('gallery-modal').classList.remove('hidden');
-  }
-
-//gallery.html
+// Modal image viewer (vertical scroll of all images)
 function openPortalGallery(images) {
   const container = document.getElementById('modal-image-container');
   container.innerHTML = images.map(src => `
@@ -233,6 +200,7 @@ function closeImage() {
 window.openImage = openImage;
 window.closeImage = closeImage;
 window.openPortalGallery = openPortalGallery;
+window.loadGallerySection = loadGallerySection;
 
 function openGalleryScroll() {
   document.getElementById("scroll-gallery-modal").classList.remove("hidden");
