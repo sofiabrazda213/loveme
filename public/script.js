@@ -215,6 +215,17 @@ makeDraggable(poem);
     'well-it-is.png',
     'well-itsmy-art.png'
   ];
+
+  display.innerHTML = `
+    <div class="portal-gallery">
+      ${images.map(src => `
+        <div class="gallery-card internet-preview">
+          <img src="images/sketchbook/${src}" alt="${src}" onclick="openImage(this.src)">
+        </div>
+      `).join('')}
+    </div>
+  `;
+  
     } else if (section === 'scroll') {
       display.innerHTML = `
         <div class="scroll-gallery-content">
