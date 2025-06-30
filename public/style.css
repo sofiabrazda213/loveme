@@ -381,12 +381,15 @@ quote-box {
   border: 1px solid white;
   width: 100%;
   max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
   color: white;
   position: relative;
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
+  box-shadow: 0 0 10px white;
 }
 
 .blog-entry {
@@ -711,16 +714,29 @@ quote-box {
 }
 
 #gallery-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90vw;     /* Ensure full width */
+  max-height: 100vh; /* or 100vh - padding */
+  background-color: rgba(0, 0, 0, 0.95);  /* Dark transparent overlay */
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
-  max-height: 90vh; /* or 100vh - padding */
 }
 
 #modal-image-container {
+  max-width: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
   gap: 2rem; /* spacing between images */
   align-items: center;
   padding: 2rem;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white;
 }
 
 /* Scroll gallery modal */
@@ -749,6 +765,10 @@ quote-box {
 }
 
 .scrollable-images {
-  max-height: 80vh;
-  overflow-y: scroll;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
 }
