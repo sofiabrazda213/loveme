@@ -716,11 +716,15 @@ quote-box {
 }
 
 #modal-image-container {
+  max-height: 80vh;             /* limit height */
+  overflow-y: auto;             /* scroll if content overflows */
   display: flex;
-  flex-direction: column;
-  gap: 2rem; /* spacing between images */
+  flex-direction: column;       /* vertical stack */
   align-items: center;
+  gap: 2rem;
   padding: 2rem;
+  border: 2px solid white;
+  box-shadow: 0 0 10px white;
 }
 
 
