@@ -73,7 +73,29 @@ function loadGallerySection(section) {
 
   if (section === 'photography') {
     const images = [
-      'b-w72.JPG',
+          'b-w22.jpg',
+          'b-w21.jpg',
+          'b-w20.jpg',
+          'b-w19.jpg',
+          'b-w18.jpg',
+          'b-w17.jpg',
+          'b-w16.jpg',
+          'b-w15.jpg',
+          'b-w14.jpg',
+          'b-w13.jpg',
+          'b-w12.jpg',
+          'b-w11.jpg',
+          'b-w10.jpg',
+          'b-w9.jpg',
+          'b-w8.jpg',
+          'b-w7.jpg',
+          'b-w6.jpg',
+          'b-w5.jpg',
+          'b-w4.jpg',
+          'b-w3.jpg',
+          'b-w2.jpg',
+          'b-w1.jpg',
+          'b-w72.JPG',
           'b-w71.JPG',
           'b-w70.JPG',
           'b-w69.JPG',
@@ -122,29 +144,7 @@ function loadGallerySection(section) {
           'b-w26.jpg',
           'b-w25.jpg',
           'b-w24.jpg',
-          'b-w23.jpg',
-          'b-w22.jpg',
-          'b-w21.jpg',
-          'b-w20.jpg',
-          'b-w19.jpg',
-          'b-w18.jpg',
-          'b-w17.jpg',
-          'b-w16.jpg',
-          'b-w15.jpg',
-          'b-w14.jpg',
-          'b-w13.jpg',
-          'b-w12.jpg',
-          'b-w11.jpg',
-          'b-w10.jpg',
-          'b-w9.jpg',
-          'b-w8.jpg',
-          'b-w7.jpg',
-          'b-w6.jpg',
-          'b-w5.jpg',
-          'b-w4.jpg',
-          'b-w3.jpg',
-          'b-w2.jpg',
-          'b-w1.jpg'
+          'b-w23.jpg'
     ];
 
     display.innerHTML = `
@@ -164,21 +164,21 @@ function loadGallerySection(section) {
     const images = [
       'sofia-b.jpg',
       'beautiful-all-of-them.jpg',
-      'open-her-up.jpg',
+      'hm.png',
       'bow-art.png',
       'girl-with-gun.png',
-      'hm.png',
-      'i-live-life-in-color.png',
+      'muy-rockera.png',
+      'Sofia-xx.png',
       'i-will-treasure-you..png',        // <-- keep double dot if that's the filename
       'lady-mujer.png',
       "maybe-now-you'll-get-it.png",     // <-- preserve apostrophe
       'muy-muy-rockera.png',
-      'muy-rockera.png',
+      'i-live-life-in-color.png',
+      'open-her-up.jpg',
+      'well-it-is.png',
       'on-a-pink-bed.png',
       'skull-man.png',
-      'Sofia-xx.png',
       'take-my-heart-but-not-my-art.png',
-      'well-it-is.png',
       'well-itsmy-art.png'
     ];
 
@@ -189,7 +189,7 @@ display.innerHTML = `
   <div class="portal-gallery">
     <div class="internet-preview" onclick="openPortalGallery(window.portalImages)">
       <img src="images/sketchbook/portal.png" alt="Preview Image">
-      <p class="preview-label">Click to view full portal</p>
+      <p class="preview-label">click to enter sketchbook</p>
     </div>
   </div>
 `;
