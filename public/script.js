@@ -199,7 +199,7 @@ display.innerHTML = `
 function openPortalGallery(images) {
   const container = document.getElementById('modal-image-container');
   container.innerHTML = images.map(src => `
-    <img src="images/sketchbook/${src}" alt="${src}" class="modal-image-item">
+    <img src="images/sketchbook/${src}" alt="${src}" class="modal-image-container">
   `).join('');
 
   document.getElementById('gallery-modal').classList.remove('hidden');
