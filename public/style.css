@@ -366,13 +366,17 @@ quote-box {
 
 .modal {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0, 0, 0, 0.85);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.95);
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 1000;
-  padding: 2rem;
+  align-items: flex-start; /* top-aligned to allow scrolling */
+  overflow-y: auto;
+  z-index: 999;
+  padding: 2rem; /* optional: adds spacing */
 }
 
 .modal-content {
@@ -713,10 +717,12 @@ quote-box {
 #gallery-modal {
   overflow-y: auto;
   max-height: 90vh; /* or 100vh - padding */
+  width: 100vw;
+  height: 100vh; /* Ensure full height */
 }
 
 #modal-image-container {
-  max-height: 80vh;             /* limit height */
+  height: auto;
   overflow-y: auto;             /* scroll if content overflows */
   display: flex;
   flex-direction: column;       /* vertical stack */
