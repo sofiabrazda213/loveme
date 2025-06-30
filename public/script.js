@@ -188,7 +188,7 @@ function loadGallerySection(section) {
 display.innerHTML = `
   <div class="portal-gallery">
     <div class="internet-preview" onclick="openPortalGallery(window.portalImages)">
-      <img src="images/sketchbook/'portal.png' alt="Preview Image">
+      <img src="images/sketchbook/portal.png" alt="Preview Image">
       <p class="preview-label">Click to view full portal</p>
     </div>
   </div>
