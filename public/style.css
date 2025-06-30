@@ -189,7 +189,7 @@ body {
   min-height: 100vh; /* always at least full screen height */
 
   /* BACKGROUND IMAGE */
-  background-image: url('site-image1.png');
+  background-image: url('images/digital/site-image1.png');
   background-size: cover;          /* spans full frame */
   background-repeat: no-repeat;
   background-position: center center;
