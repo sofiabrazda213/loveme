@@ -715,14 +715,14 @@ quote-box {
 }
 
 #gallery-modal {
-  overflow-y: auto;
+  /* overflow-y: auto; */
   width: 100vw;
   height: 100vh; /* Ensure full height */
 }
 
 #modal-image-container {
   height: auto;
-  overflow-y: auto;             /* scroll if content overflows */
+  /* overflow-y: auto;             /* scroll if content overflows */
   display: flex;
   flex-direction: column;       /* vertical stack */
   align-items: center;
