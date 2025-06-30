@@ -29,7 +29,6 @@ window.onload = () => {
 };
 
 // Only run quote generator if on home.html
-// Only run quote generator if on home.html
 if (window.location.pathname.includes("home.html")) {
   async function generateLine() {
     try {
@@ -163,6 +162,9 @@ function loadGallerySection(section) {
 
   else if (section === 'portal') {
     const images = [
+      'sofia-b.jpg',
+      'beautiful-all-of-them.jpg',
+      'open-her-up.jpg',
       'bow-art.png',
       'girl-with-gun.png',
       'hm.png',
@@ -173,7 +175,6 @@ function loadGallerySection(section) {
       'muy-muy-rockera.png',
       'muy-rockera.png',
       'on-a-pink-bed.png',
-      'portal.png',
       'skull-man.png',
       'Sofia-xx.png',
       'take-my-heart-but-not-my-art.png',
@@ -181,13 +182,13 @@ function loadGallerySection(section) {
       'well-itsmy-art.png'
     ];
 
-    // Inject thumbnail with click handler
+    //inject images
     window.portalImages = images; // Expose it globally
 
 display.innerHTML = `
   <div class="portal-gallery">
     <div class="internet-preview" onclick="openPortalGallery(window.portalImages)">
-      <img src="images/sketchbook/${images[0]}" alt="Preview Image">
+      <img src="images/sketchbook/'portal.png' alt="Preview Image">
       <p class="preview-label">Click to view full portal</p>
     </div>
   </div>
