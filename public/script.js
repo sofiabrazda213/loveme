@@ -73,6 +73,8 @@ function loadGallerySection(section) {
 
   if (section === 'photography') {
     const images = [
+          'b-wnew.jpg',
+          'b-w60.JPG',
           'b-w22.jpg',
           'b-w21.jpg',
           'b-w20.jpg',
@@ -107,7 +109,6 @@ function loadGallerySection(section) {
           'b-w63.JPG',
           'b-w62.JPG',
           'b-w61.JPG',
-          'b-w60.JPG',
           'b-w59.JPG',
           'b-w58.JPG',
           'b-w57.JPG',
