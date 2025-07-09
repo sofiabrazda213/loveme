@@ -73,11 +73,38 @@
       padding-bottom: 4rem;
       word-wrap: break-word;
       overflow-wrap: break-word;
+      transition: all 0.4s ease;
+    }
+
+    /* Hidden by default */
+    .description-box {
+      background-color: pink;
+      color: #1e1e1e;
+      padding: 1rem;
+      border-radius: 5px;
+      text-align: center;
+      margin-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(-20px);
+      transition: all 0.4s ease;
+      pointer-events: none;
     }
 
     .quote-box {
       white-space: pre-wrap;
-  }
+      transition: color 0.4s ease, transform 0.4s ease;
+    }
+
+    /* Hover effect triggers */
+    .poetry-container:hover .description-box {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .poetry-container:hover .quote-box {
+      color: lightpink;
+      transform: translateY(1rem); /* shifts it down */
+    }
 
   </style>
   </head>
@@ -117,6 +144,7 @@
       
         <div class="right-pane">
           <div class="poetry-container">
+            <div class="description-box">Poem about</div>
             <div class="quote-box" id="quote-text">Loading line...</div>
             <button onclick="generateLine()">new poem</button>
           </div>
