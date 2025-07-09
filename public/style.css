@@ -264,29 +264,6 @@ body {
     text-align: center;
   }
 
-  /* Home - Right-side poetry container */
-.poetry-container {
-  position: relative;
-  /*width: 100%;
-  height: 600px; or however tall you want the area to be */
-  width: 320px;
-  min-height: 100vh;  /* fills the screen initially */
-  height: auto;       /* grows with content */
-  background-color: #1f2573; /* ensure the blue continues */
-  border: 2px solid white;
-  padding: 1rem;
-  padding-bottom: 4rem; /* optional breathing room */
-  box-shadow: inset 0 0 10px #000, 0 0 10px #222;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  margin-left: auto;
-  margin-right: 1.5rem;     /* adds space from the right edge */
-  margin-top: 2rem;         /* separate from top of .content-frame */
-  margin-bottom: 2rem;      /* space below if needed */
-}
-
 /* Poetry generator */
 .poetry-container button {
   background: transparent;
@@ -295,6 +272,7 @@ body {
   padding: 0.5rem;
   cursor: pointer;
   transition: opacity 0.3s;
+  margin-top: 1.5rem;
 }
 
 .poetry-container button:hover {
