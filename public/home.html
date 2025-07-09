@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" />
      <!-- Internal CSS Section -->
   <style>
-    .main-content {
-      display: flex;
-      flex-direction: row;
-      height: 100vh;
-      width: 100vw;              /*full screen width */
-      overflow: hidden;
+    .main-page {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
     }
 
     .content-frame, .right-pane {
@@ -69,17 +69,14 @@
         </nav>
       </header>
   
-      <main>
-        <main class="main-content">
-          <div class="content-frame">
-            <h2>In bloom</h2>
-            <!-- Whatever else you want on the left -->
-            <div class="image-bg">
-              <img src="images/site-image1.png" alt="site img" />
-            </div>
+      <main class="main-page">
+        <div class="content-frame">
+          <h2>In bloom</h2>
+          <div class="image-bg">
+            <img src="images/site-image1.png" alt="site img" />
           </div>
-        </main>
-  
+        </div>
+      
         <div class="right-pane">
           <div class="poetry-container">
             <div class="quote-box" id="quote-text">Loading line...</div>

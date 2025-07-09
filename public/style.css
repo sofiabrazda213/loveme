@@ -177,13 +177,13 @@ body {
   /* Frame around content */
   .content-frame {
     display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  box-sizing: border-box;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
 
   /* FIXED HEIGHT HANDLING */
   min-height: 100vh; /* always at least full screen height */
