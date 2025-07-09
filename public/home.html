@@ -20,7 +20,7 @@
       width: 60%;
       min-height: 100vh;
       /* overflow-y: auto; */
-      overflow: hidden;
+      overflow: visible;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -50,6 +50,11 @@
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease; /* smooth animation */
+    }
+
+    .image-bg img:hover {
+      box-shadow: 0 0 20px white;
+      transition: box-shadow 0.3s ease;
     }
 
     /* === Right Pane === */
@@ -93,7 +98,7 @@
       max-height: 80vh;
       overflow: visible;
       box-sizing: border-box;
-      padding: 2rem;
+      padding-bottom: 4rem;
       white-space: pre-wrap;
       transition: color 0.4s ease, transform 0.4s ease;
     }
