@@ -148,10 +148,10 @@
   
         <!-- Nav Links -->
         <nav class="header-nav">
+          <a href="home.html">home</a>
           <a href="about.html">about</a>
           <a href="blog.html">blog</a>
           <a href="gallery.html">gallery</a>
-          
         </nav>
       </header>
   
@@ -165,6 +165,9 @@
       
         <div class="right-pane">
           <div class="poetry-container">
+            <div class="quote-box" id="quote-text">Loading line...</div>
+            <button onclick="generateLine()">new poem</button>
+
             <div class="description-box">
               <p class="fade-line">Enjoy this poetry container</p>
               <p class="fade-line">It fetches a random poem</p>
@@ -173,8 +176,6 @@
               <p class="fade-line">For your screen</p>
               <p class="fade-line">Find a poem you like</p>
             </div>
-            <div class="quote-box" id="quote-text">Loading line...</div>
-            <button onclick="generateLine()">new poem</button>
           </div>
         </div>
       </main>
