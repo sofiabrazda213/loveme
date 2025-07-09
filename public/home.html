@@ -8,24 +8,13 @@
      <!-- Internal CSS Section -->
   <style>
     .main-content {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
+    display: flex;
+    height: 100vh;
     }
 
-    .content-frame {
+    .content-frame, .right-pane {
       width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      box-sizing: border-box;
-      padding: 2rem;
       min-height: 100vh;
-      background-image: url('images/digital/site-image1.png');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center;
     }
 
     .content-frame:hover {
@@ -43,15 +32,6 @@
       height: auto;
       display: block;
       object-fit: cover;
-    }
-
-    .right-pane {
-      width: 50%;
-      overflow-y: auto;
-      padding: 2rem;
-      background-color: #1e3a8a;
-      color: white;
-      box-sizing: border-box;
     }
 
     .poetry-container {
