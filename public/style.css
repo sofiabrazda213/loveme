@@ -138,7 +138,7 @@ body {
 
 /* On hover, turn the underline into a full background */
 .header-nav a:hover::before {
-  bottom: 0;
+  top: 0;
   height: 100%;
 }
 
