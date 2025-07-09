@@ -15,12 +15,28 @@
     overflow: hidden;
     }
 
-    .content-frame, .right-pane {
+    .left-frame, .right-pane {
       width: 50%;
       min-height: 100vh;
+      overflow-y: auto;           /* enable scrolling */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;    /* vertical centering */
+      align-items: center;        /* horizontal centering */
+      padding: 2rem;
+      background-image: url('images/digital/site-image1.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-sizing: border-box;
     }
 
-    .content-frame:hover {
+    .left-frame {
+    box-shadow: 0 0 20px 10px white; /* centered glow */
+    }
+
+
+    .left-frame:hover {
       box-shadow: 0 0 20px white;
     }
 
@@ -40,6 +56,7 @@
     .poetry-container {
       max-width: 600px;
       margin: 0 auto;
+      padding-bottom: 4rem;
     }
   </style>
   </head>
@@ -70,11 +87,11 @@
       </header>
   
       <main class="main-page">
-        <div class="content-frame">
-          <h2>In bloom</h2>
+        <div class="left-frame">
+          <!-- <h2>In bloom</h2>
           <div class="image-bg">
             <img src="images/site-image1.png" alt="site img" />
-          </div>
+          </div> -->
         </div>
       
         <div class="right-pane">
