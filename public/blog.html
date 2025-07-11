@@ -5,10 +5,14 @@
     <title>in bloom</title>
     <link rel="stylesheet" href="style.css"/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Ballet&display=swap"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Ballet&display=swap" rel="stylesheet"/>
     <style>
+      body {
+        background-color: #12126a;
+        font-family: 'Times New Roman', serif;
+        color: #000;
+        margin: 0;
+      }
       .centered-img-container {
         text-align: center;
         margin-top: 20px;
@@ -28,18 +32,13 @@
   </head>
   <body>
       <header class="site-header">
+        <a href="home.html" class="site-title">In bloom</a>
         <div class="header-left">
           <!-- Back Button Container -->
           <div class="back-container">
             <a href="index.html" class="back-button" aria-label="Go back to menu">
               <span class="tooltip">← back</span>
             </a>
-          </div>
-  
-          <!-- Title and Subtitle Container -->
-          <div class="title-container">
-            <a href="home.html" class="site-title">In bloom</a>
-            <!-- <p class="site-subtitle">a poetic interface</p> -->
           </div>
         </div>
   
@@ -54,41 +53,45 @@
 
     <main>
         <div class="content-frame">
-            <!-- BLOG CARD GRID -->
-            <div class="centered-img-container">
-              <img src="images/digital/mahlegs.png" alt="gallery img" class="gallery-img centered-img" />
-            </div>
-            <div class="blog-grid">
-                <div class="blog-card" onclick="openPost('blog-post-1')">
-                    <h3>X</h3>
-                    <p>X...</p>
-                </div>
-                <div class="blog-card" onclick="openPost('blog-post-2')">
-                    <h3>X</h3>
-                    <p>X...</p>
-                </div>
-            </div>
+           <!-- Leg Image Top -->
+    <div class="centered-img-container">
+      <img src="images/digital/mahlegs.png" alt="gallery img" class="gallery-img centered-img" />
+    </div>
+
+    <!-- Blog Cards -->
+    <div class="blog-grid">
+      <div class="blog-card" onclick="openPost('blog-post-1')">
+        <h3>X</h3>
+        <p>X...</p>
+      </div>
+      <div class="blog-card" onclick="openPost('blog-post-2')">
+        <h3>X</h3>
+        <p>X...</p>
+      </div>
+    </div>
   
-            <!-- MODAL BACKDROP + CONTENT -->
-            <div id="blog-modal" class="moda hiddenl">
-                <div class="modal-content">
-                <span class="close-button" onclick="closePost()">&times;</span>
-                <div id="blog-posts-wrapper">
-                    <div id="blog-post-1" class="blog-entry hidden">
-                        <h2>post 1</h2>
-                        <p>X....</p>
-                    </div>
-                    <div id="blog-post-2" class="blog-entry hidden">
-                        <h2>post 2</h2>
-                        <p>X...</p>
-                    </div>
-                    <div id="blog-post-3" class="blog-entry hidden">
-                        <h2>post 3</h2>
-                        <p>X...</p>
-                    </div>
-                </div>
-             </div>
-            </div>
+            <!-- Blog Modal (centered under image) -->
+    <div id="blog-modal" class="modal hidden">
+      <div class="modal-content">
+        <span class="close-button" onclick="closePost()">&times;</span>
+        <div id="blog-posts-wrapper">
+          <div id="blog-post-1" class="blog-entry hidden">
+            <h2>post 1</h2>
+            <p>X....</p>
+          </div>
+          <div id="blog-post-2" class="blog-entry hidden">
+            <h2>post 2</h2>
+            <p>X...</p>
+          </div>
+          <div id="blog-post-3" class="blog-entry hidden">
+            <h2>post 3</h2>
+            <p>X...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+            <!-- Poem -->
             <div class="poem-wrapper">
               <div class="poem-block-one" id="draggable-poem">
                 <p class="poem-title"><strong>caladium</strong></p>
