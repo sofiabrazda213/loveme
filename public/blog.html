@@ -15,8 +15,14 @@
       }
 
       .centered-img {
-        max-width: 60%;
+        max-width: 30%;
         height: auto;
+        display: block;
+        margin: 20px auto;
+      }
+
+      .hidden {
+        display: none !important;
       }
     </style>
   </head>
@@ -45,13 +51,13 @@
           <a href="gallery.html">gallery</a>
         </nav>
       </header>
-      <div class="centered-img-container">
-        <img src="images/digital/mahlegs.png" alt="gallery img" class="gallery-img centered-img" />
-      </div>
 
     <main>
         <div class="content-frame">
             <!-- BLOG CARD GRID -->
+            <div class="centered-img-container">
+              <img src="images/digital/mahlegs.png" alt="gallery img" class="gallery-img centered-img" />
+            </div>
             <div class="blog-grid">
                 <div class="blog-card" onclick="openPost('blog-post-1')">
                     <h3>X</h3>
