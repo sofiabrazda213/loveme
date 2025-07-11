@@ -356,11 +356,12 @@ quote-box {
 .blog-grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1.5rem;
+  justify-content: center;
+  gap: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 2rem;
   padding: 2rem;
 }
 
