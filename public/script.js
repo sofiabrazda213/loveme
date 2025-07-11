@@ -69,7 +69,7 @@ function closePost() {
 
 // LOAD GALLERY
 function loadGallerySection(section) {
-  const display = document.getElementById("gallery-display");
+  const display = document.getElementById("gallery-content");
 
   if (section === 'photography') {
     const images = [
