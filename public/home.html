@@ -52,8 +52,8 @@
     display: block;
     }
 
-    .left-frame:hover .image-bg img {
-      transform: scale(1.05); /* zoom in by 5% */
+    .left-frame:hover .image-bg img:not(.overlay-img) {
+      transform: scale(1.05);
       filter: brightness(1.1);
     }
 
@@ -71,12 +71,15 @@
     }
 
     .overlay-img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 60%; /* Or whatever size you want */
-    pointer-events: none; /* Prevents it from interfering with clicks */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      height: auto;
+      max-width: 300px;  /* or a specific width you want */
+      max-height: 300px; /* optional limit */
+      pointer-events: none;
     }
 
     /* === Right Pane === */
