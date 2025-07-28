@@ -40,7 +40,8 @@ let exploded = false;
 let messageShown = false;
 
 function setup() {
-  createCanvas(600, 800);
+  let canvas = createCanvas(600, 800);
+  canvas.parent('sketch-container');
   noStroke();
   background('#1f2573');
 }
