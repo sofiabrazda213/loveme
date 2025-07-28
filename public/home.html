@@ -53,15 +53,15 @@
     }
 
     .music-note-sticker {
-      width: 100px;         /* shrink the image width */
+      width: 5px;         /* shrink the image width */
       height: auto;         /* preserve aspect ratio */
       position: absolute;   /* or relative/fixed depending on layout */
-      top: 20px;            /* distance from top */
+      top: 30px;            /* distance from top */
       left: 30px;           /* distance from left */
       z-index: 10;  
     }
 
-    .left-frame:hover .image-bg img:not(.overlay-img) {
+    .left-frame:hover .image-bg img:not(.overlay-img, .music-note-sticker) {
       transform: scale(1.05);
       filter: brightness(1.1);
     }
