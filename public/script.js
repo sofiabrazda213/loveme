@@ -217,3 +217,39 @@ function closeImage() {
 window.loadGallerySection = loadGallerySection;
 window.openPortalGallery = openPortalGallery;
 window.closeImage = closeImage;
+
+// BLOG SCRIPT
+
+console.log("JS file is loaded!");
+
+// Wait until the DOM is fully loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Show modal when poem-preview is clicked
+  document.querySelectorAll('.poem-preview').forEach(preview => {
+    preview.addEventListener('click', () => {
+      const poemId = preview.getAttribute('data-poem');
+      console.log('Clicked poem preview:', poemId);
+
+      const modal = document.getElementById(poemId);
+      if (modal) {
+        modal.classList.add('show');
+
+        // Add backdrop
+        document.body.insertAdjacentHTML(
+          'beforeend',
+          '<div class="modal-backdrop show"></div>'
+        );
+      } else {
+        console.error('No modal found with ID:', poemId);
+      }
+    });
+  });
+
+  // Hide modal when clicking the backdrop
+  document.body.addEventListener('click', (e) => {
+    if (e.target.classList.contains('modal-backdrop')) {
+      document.querySelectorAll('.poem-modal').forEach(m => m.classList.remove('show'));
+      document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
+    }
+  });
+});
