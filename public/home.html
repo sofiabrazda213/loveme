@@ -53,13 +53,14 @@
     }
 
     .music-note-sticker {
-      width: 5px;       /* make it tiny */
-      height: auto;      /* preserve aspect ratio */
+      width: 20px;              /* much tinier than before */
+      height: auto;
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%); /* perfectly center */
-      z-index: 10; 
+      transform: translate(-50%, -50%);
+      z-index: 11;              /* higher than overlay */
+      pointer-events: none;     /* so clicks go through */
     }
 
     .image-bg img {
@@ -74,9 +75,10 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      /*transform: translate(-50%, -50%); */
-      width: 20px;  /* or whatever size fits best */
-      z-index: 1;
+      transform: translate(-50%, -50%);
+      width: 300px;             /* adjust to desired card size */
+      height: auto;
+      z-index: 10;
     }
 
     /* === Right Pane === */
