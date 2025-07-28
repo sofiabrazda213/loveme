@@ -52,6 +52,15 @@
     display: block;
     }
 
+    .music-note-sticker {
+      width: 100px;         /* shrink the image width */
+      height: auto;         /* preserve aspect ratio */
+      position: absolute;   /* or relative/fixed depending on layout */
+      top: 20px;            /* distance from top */
+      left: 30px;           /* distance from left */
+      z-index: 10;  
+    }
+
     .left-frame:hover .image-bg img:not(.overlay-img) {
       transform: scale(1.05);
       filter: brightness(1.1);
@@ -178,7 +187,11 @@
           <!-- <h2>In bloom</h2> -->
           <div class="image-bg">
             <img src="images/digital/site-image1.png" alt="site img" class="bg-img"/>
-            <img src="images/digital/index-card.png" alt="overlay" class="overlay-img" />
+            <div class="index-container">
+              <img src="images/digital/index-card.png" alt="overlay" class="overlay-img" />
+              <div class="index-text">Your Text Here</div>
+              <img src="images/digital/music-note.png" alt="sticker" class="music-note-sticker" />
+            </div>
           </div>
         </div>
       
