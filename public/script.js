@@ -232,6 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const modal = document.getElementById(poemId);
       if (modal) {
+        modal.classList.remove('hidden');
         modal.classList.add('show');
 
         // Add backdrop
@@ -248,7 +249,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // Hide modal when clicking the backdrop
   document.body.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal-backdrop')) {
-      document.querySelectorAll('.poem-modal').forEach(m => m.classList.remove('show'));
+      document.querySelectorAll('.poem-modal').forEach(m => {
+        m.classList.remove('show');
+        m.classList.add('hidden');
+      });      
       document.querySelectorAll('.modal-backdrop').forEach(b => b.remove());
     }
   });
