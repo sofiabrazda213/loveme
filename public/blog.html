@@ -35,63 +35,63 @@
       }
 
       .poem-preview-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100px;
-  right: 30px;
-  gap: 10px;
-}
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      top: 100px;
+      right: 30px;
+      gap: 10px;
+    }
 
-.poem-preview {
-  width: 60px;
-  height: 60px;
-  background: black;
-  color: white;
-  font-size: 10px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  border: 2px solid white;
-}
+    .poem-preview {
+      width: 60px;
+      height: 60px;
+      background: #db8ae2;
+      color: white;
+      font-size: 10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      border: 2px solid white;
+    }
 
-.poem-modal {
-  position: fixed;
-  top: 10%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ffffcc;
-  padding: 2rem;
-  max-width: 80%;
-  border: 3px solid purple;
-  z-index: 1000;
-  display: none;
-}
+    .poem-modal {
+      position: fixed;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffffcc;
+      padding: 2rem;
+      max-width: 80%;
+      border: 3px solid purple;
+      z-index: 1000;
+      display: none;
+    }
 
-.poem-modal.show {
-  display: block;
-}
+    .poem-modal.show {
+      display: block;
+    }
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.6);
-  z-index: 999;
-  display: none;
-}
+    .modal-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.6);
+      z-index: 999;
+      display: none;
+    }
 
-.modal-backdrop.show {
-  display: block;
-}
+    .modal-backdrop.show {
+      display: block;
+    }
 
-.hidden {
-  display: none;
-}
+    .hidden {
+      display: none;
+    }
     </style>
   </head>
   <body>
@@ -248,6 +248,7 @@
 document.querySelectorAll('.poem-preview').forEach(preview => {
   preview.addEventListener('click', () => {
     const poemId = preview.getAttribute('data-poem');
+    console.log(poemId); // should say "caladium", "lady-luck", etc.
     document.getElementById(poemId).classList.add('show');
     document.body.insertAdjacentHTML('beforeend', '<div class="modal-backdrop show"></div>');
   });
