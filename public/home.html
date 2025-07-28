@@ -53,12 +53,13 @@
     }
 
     .music-note-sticker {
-      width: 5px;         /* shrink the image width */
-      height: 5px;         /* preserve aspect ratio */
-      position: relative;   /* or relative/fixed depending on layout */
-      top: 30px;            /* distance from top */
-      left: 30px;           /* distance from left */
-      z-index: 10;  
+      width: 5px;       /* make it tiny */
+      height: auto;      /* preserve aspect ratio */
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%); /* perfectly center */
+      z-index: 10; 
     }
 
     .image-bg img {
@@ -69,17 +70,12 @@
       transition: transform 0.5s ease; /* smooth animation */
     }
 
-    .image-bg img:hover {
-      box-shadow: 0 0 20px white;
-      transition: box-shadow 0.3s ease;
-    }
-
     .overlay-img {
       position: absolute;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
-      width: 5px;  /* or whatever size fits best */
+      /*transform: translate(-50%, -50%); */
+      width: 20px;  /* or whatever size fits best */
       z-index: 1;
     }
 
