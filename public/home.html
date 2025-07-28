@@ -36,6 +36,10 @@
       filter: brightness(1.1);
     }
 
+    .index-container {
+      position: relative;
+    }
+
     .image-bg {
       position: relative;
       width: 100%;
@@ -50,6 +54,16 @@
       top: 0;
       left: 0;
       z-index: 0;
+    }
+
+    .overlay-img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1000px;             /* adjust to desired card size */
+      height: auto;
+      z-index: 10;
     }
 
     .music-note-sticker {
@@ -69,16 +83,6 @@
       object-fit: cover;
       display: block;
       transition: transform 0.5s ease; /* smooth animation */
-    }
-
-    .overlay-img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 300px;             /* adjust to desired card size */
-      height: auto;
-      z-index: 10;
     }
 
     /* === Right Pane === */
