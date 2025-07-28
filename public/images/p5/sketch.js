@@ -79,8 +79,8 @@ function draw() {
   }
   fill(219, 138, 226, messageAlpha); // #333 is rgb(51,51,51)
   textAlign(CENTER, CENTER);
-  textSize(32);
-  text("i'm glad you're here", width / 2, height / 2);
+  textSize(50);
+  text("i'm so glad you're here", width / 2, height / 3);
 }
 }
 

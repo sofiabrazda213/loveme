@@ -37,6 +37,7 @@
       /* position: absolute;
       width: 100%;
       height: 100% */
+      position: relative;
       width: 95%;
       height: 95%;
       padding: 0;
@@ -46,6 +47,11 @@
       justify-content: center;
     }
     
+    .bg-img {
+    width: 100%;
+    display: block;
+    }
+
     .left-frame:hover .image-bg img {
       transform: scale(1.05); /* zoom in by 5% */
       filter: brightness(1.1);
@@ -62,6 +68,15 @@
     .image-bg img:hover {
       box-shadow: 0 0 20px white;
       transition: box-shadow 0.3s ease;
+    }
+
+    .overlay-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 60%; /* Or whatever size you want */
+    pointer-events: none; /* Prevents it from interfering with clicks */
     }
 
     /* === Right Pane === */
@@ -159,7 +174,8 @@
         <div class="left-frame">
           <!-- <h2>In bloom</h2> -->
           <div class="image-bg">
-            <img src="images/digital/site-image1.png" alt="site img" />
+            <img src="images/digital/site-image1.png" alt="site img" class="bg-img"/>
+            <img src="images/digital/index-card.png" alt="overlay" class="overlay-img" />
           </div>
         </div>
       
@@ -168,12 +184,11 @@
             <button onclick="generateLine()">new poem</button>
             <div class="quote-box" id="quote-text">Loading line...</div>
             <div class="description-box">
-              <p class="fade-line">Enjoy this poetry container</p>
-              <p class="fade-line">It fetches a random poem</p>
-              <p class="fade-line">From a poetry database</p>
-              <p class="fade-line">JSON parses the author and title</p>
-              <p class="fade-line">For your screen</p>
-              <p class="fade-line">Find a poem you like</p>
+              <p class="fade-line">enjoy this poetry container</p>
+              <p class="fade-line">it fetches a random poem</p>
+              <p class="fade-line">parsed from a poetry database</p>
+              <p class="fade-line">for your computer screen</p>
+              <p class="fade-line">find a poem you like xx</p>
             </div>
           </div>
         </div>
