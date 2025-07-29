@@ -46,6 +46,12 @@
 
     .index-text {
       z-index: 12;
+      position: absolute;     /* or relative if you want it to move with the card */
+      color: black;           /* optional: make sure text color contrasts */
+      font-size: 1rem;        /* adjust as needed */
+      top: 50%;               /* center it */
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     .image-bg {
