@@ -489,6 +489,14 @@ quote-box {
 
 /* GALLERY.HTML BITCH */
 
+.linked-picture {
+  width: 20px;
+  height: auto;
+  border: 2px solid #cc47f5;
+  display: block;
+  margin: 0 auto;
+}
+
 .gallery-content {
   display: block;
   width: 90%;
